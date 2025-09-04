@@ -429,7 +429,91 @@ export default function RoyalCaressLanding() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-8xl mx-auto mb-16 lg:mb-20">
+          {/* Mobile Layout - Stack vertically with proper spacing */}
+          <div className="block lg:hidden space-y-8 mb-16">
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20">
+                <Image
+                  src="/images/red-rose-product.jpg"
+                  alt="Body-Safe Materials"
+                  width={640}
+                  height={480}
+                  className="w-full h-80 object-cover object-center transition-all duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-left">
+                  <h3 className="text-xl font-serif font-medium text-white mb-3 tracking-tight">Body-Safe Materials</h3>
+                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-4">
+                    Medical-grade, phthalate-free silicone that honors your body's wisdom
+                  </p>
+                  <Link href="/product/skins-rose-lix">
+                    <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
+                      DISCOVER
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20">
+                <Image
+                  src="/images/white-rose-gold-product.jpg"
+                  alt="Inclusive by Design"
+                  width={640}
+                  height={480}
+                  className="w-full h-80 object-cover object-center transition-all duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-left">
+                  <h3 className="text-xl font-serif font-medium text-white mb-3 tracking-tight">Inclusive by Design</h3>
+                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-4">
+                    Thoughtfully crafted for all anatomies and identities, celebrating every expression of self
+                  </p>
+                  <Link href="/product/satisfyer-love-triangle">
+                    <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
+                      DISCOVER
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20">
+                <Image
+                  src="/images/black-product-hand.jpg"
+                  alt="Whisper-Quiet Technology"
+                  width={640}
+                  height={480}
+                  className="w-full h-80 object-cover object-center transition-all duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-left">
+                  <h3 className="text-xl font-serif font-medium text-white mb-3 tracking-tight">
+                    Whisper-Quiet Technology
+                  </h3>
+                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-4">
+                    Ultra-quiet operation under 50dB for complete privacy and discretion in any setting
+                  </p>
+                  <Link href="/product/fifty-shades-mini">
+                    <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
+                      DISCOVER
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout - Original grid */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-8 lg:gap-12 max-w-8xl mx-auto mb-16 lg:mb-20">
             <div className="group cursor-pointer h-full">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
                 <Image
@@ -439,7 +523,7 @@ export default function RoyalCaressLanding() {
                   height={480}
                   className="w-full h-[28rem] object-cover object-center transition-all duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-10 left-10 text-left">
@@ -467,7 +551,7 @@ export default function RoyalCaressLanding() {
                   height={480}
                   className="w-full h-[28rem] object-cover object-center transition-all duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-10 left-10 text-left">
@@ -495,7 +579,7 @@ export default function RoyalCaressLanding() {
                   height={480}
                   className="w-full h-[28rem] object-cover object-center transition-all duration-700 group-hover:scale-105"
                   loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-10 left-10 text-left">
