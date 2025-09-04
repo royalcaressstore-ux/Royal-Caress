@@ -148,7 +148,7 @@ const FeatureSection = React.memo(
             <Link href={href}>
               <Button
                 size="default"
-                className="bg-white text-[#B3123D] hover:bg-white/90 px-8 py-3 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full"
+                className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-3 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full"
               >
                 {buttonText}
               </Button>
@@ -443,9 +443,9 @@ export default function RoyalCaressLanding() {
                   sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-left">
+                <div className="absolute bottom-6 left-6 right-6 text-left">
                   <h3 className="text-xl font-serif font-medium text-white mb-3 tracking-tight">Body-Safe Materials</h3>
-                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-4">
+                  <p className="text-white/90 text-sm font-light leading-relaxed mb-4">
                     Medical-grade, phthalate-free silicone that honors your body's wisdom
                   </p>
                   <Link href="/product/skins-rose-lix">
@@ -469,9 +469,9 @@ export default function RoyalCaressLanding() {
                   sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-left">
+                <div className="absolute bottom-6 left-6 right-6 text-left">
                   <h3 className="text-xl font-serif font-medium text-white mb-3 tracking-tight">Inclusive by Design</h3>
-                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-4">
+                  <p className="text-white/90 text-sm font-light leading-relaxed mb-4">
                     Thoughtfully crafted for all anatomies and identities, celebrating every expression of self
                   </p>
                   <Link href="/product/satisfyer-love-triangle">
@@ -495,11 +495,11 @@ export default function RoyalCaressLanding() {
                   sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-left">
+                <div className="absolute bottom-6 left-6 right-6 text-left">
                   <h3 className="text-xl font-serif font-medium text-white mb-3 tracking-tight">
                     Whisper-Quiet Technology
                   </h3>
-                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-4">
+                  <p className="text-white/90 text-sm font-light leading-relaxed mb-4">
                     Ultra-quiet operation under 50dB for complete privacy and discretion in any setting
                   </p>
                   <Link href="/product/fifty-shades-mini">

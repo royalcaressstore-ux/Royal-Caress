@@ -111,8 +111,65 @@ export const OptimizedTestimonialCarousel = React.memo(({ testimonials }: Testim
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center">
-      <div className="text-left">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-start">
+      {/* Mobile Layout */}
+      <div className="block lg:hidden order-1">
+        <div className="text-left mb-8">
+          <h2 className="text-3xl md:text-4xl font-serif font-light text-white mb-4 lg:mb-6 tracking-tight">
+            Real Stories. Honest Pleasure.
+          </h2>
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light mb-6 lg:mb-8">
+            The voices of those who've discovered their own rhythm, their own truth
+          </p>
+        </div>
+
+        {/* Testimonial Card */}
+        <div className="relative mb-8">
+          <div className="overflow-hidden rounded-3xl">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`${testimonial.name}-${index}`}
+                  testimonial={testimonial}
+                  isActive={index === currentTestimonial}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Controls - Below testimonial */}
+        <div className="flex flex-col items-center space-y-4">
+          <div className="flex gap-3">{indicators}</div>
+
+          <div className="flex gap-3">
+            <button
+              onClick={handlePrevious}
+              className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
+              aria-label="Previous testimonial"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
+              aria-label="Next testimonial"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block text-left order-1">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-4 lg:mb-6 tracking-tight">
           Real Stories. Honest Pleasure.
         </h2>
@@ -144,7 +201,8 @@ export const OptimizedTestimonialCarousel = React.memo(({ testimonials }: Testim
         </div>
       </div>
 
-      <div className="relative">
+      {/* Testimonial Card - Desktop */}
+      <div className="hidden lg:block relative order-2">
         <div className="overflow-hidden rounded-3xl">
           <div
             className="flex transition-transform duration-500 ease-in-out"
