@@ -14,10 +14,17 @@ interface DynamicVideoProps {
 export function DynamicVideo({ src, poster, className, onPlay, onPause }: DynamicVideoProps) {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted || typeof window === "undefined") return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,7 +41,7 @@ export function DynamicVideo({ src, poster, className, onPlay, onPause }: Dynami
     }
 
     return () => observer.disconnect()
-  }, [isLoaded])
+  }, [isLoaded, isMounted])
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -60,6 +67,20 @@ export function DynamicVideo({ src, poster, className, onPlay, onPause }: Dynami
         handlePause()
       }
     }
+  }
+
+  if (!isMounted) {
+    return (
+      <div className={className}>
+        <div className="w-full h-full bg-black/20 flex items-center justify-center">
+          <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+            <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (

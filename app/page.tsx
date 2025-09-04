@@ -6,12 +6,78 @@ import { Instagram, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect, useCallback, useMemo } from "react"
-import { CookieConsentBanner } from "@/components/cookie-consent-banner"
-import { AgeVerificationModal } from "@/components/age-verification-modal"
-import { CookieSettingsButton } from "@/components/cookie-settings-button"
-import { DynamicVideo } from "@/components/dynamic-video"
-import { OptimizedTestimonialCarousel } from "@/components/optimized-testimonial-carousel"
+import dynamic from "next/dynamic"
 import React from "react"
+
+// Dynamic imports for client-only components
+const CookieConsentBanner = dynamic(
+  () => import("@/components/cookie-consent-banner").then((mod) => ({ default: mod.CookieConsentBanner })),
+  {
+    ssr: false,
+    loading: () => null,
+  },
+)
+
+const AgeVerificationModal = dynamic(
+  () => import("@/components/age-verification-modal").then((mod) => ({ default: mod.AgeVerificationModal })),
+  {
+    ssr: false,
+    loading: () => null,
+  },
+)
+
+const CookieSettingsButton = dynamic(
+  () => import("@/components/cookie-settings-button").then((mod) => ({ default: mod.CookieSettingsButton })),
+  {
+    ssr: false,
+    loading: () => <div className="w-24 h-8"></div>,
+  },
+)
+
+const DynamicVideo = dynamic(
+  () => import("@/components/dynamic-video").then((mod) => ({ default: mod.DynamicVideo })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-full bg-black/20 flex items-center justify-center">
+        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+          <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    ),
+  },
+)
+
+const OptimizedTestimonialCarousel = dynamic(
+  () =>
+    import("@/components/optimized-testimonial-carousel").then((mod) => ({
+      default: mod.OptimizedTestimonialCarousel,
+    })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center">
+        <div className="text-left">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-4 lg:mb-6 tracking-tight">
+            Real Stories. Honest Pleasure.
+          </h2>
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light mb-6 lg:mb-8">
+            The voices of those who've discovered their own rhythm, their own truth
+          </p>
+        </div>
+        <div className="relative">
+          <div className="bg-white/95 border-0 shadow-lg rounded-3xl backdrop-blur-sm p-6 lg:p-8 xl:p-10 animate-pulse">
+            <div className="h-6 bg-gray-200 rounded mb-4"></div>
+            <div className="h-20 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+)
 
 const ProductCard = React.memo(
   ({
@@ -161,21 +227,31 @@ export default function RoyalCaressLanding() {
   const [typewriterText, setTypewriterText] = useState("")
   const [showButton, setShowButton] = useState(false)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   const fullTitle = "Because intimacy deserves the finest care."
 
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   const handleScroll = useCallback(() => {
+    if (typeof window === "undefined") return
     const currentScrollY = window.scrollY
     setScrolled(currentScrollY > 100)
     setScrollY(currentScrollY)
   }, [])
 
   useEffect(() => {
+    if (!isMounted || typeof window === "undefined") return
+
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [handleScroll])
+  }, [handleScroll, isMounted])
 
   useEffect(() => {
+    if (!isMounted) return
+
     // Typewriter animation for title
     let currentIndex = 0
     const typewriterTimer = setInterval(() => {
@@ -202,7 +278,7 @@ export default function RoyalCaressLanding() {
       clearInterval(typewriterTimer)
       whisperTimers.forEach((timer) => clearTimeout(timer))
     }
-  }, [])
+  }, [isMounted])
 
   const testimonials = useMemo(
     () => [
@@ -243,7 +319,8 @@ export default function RoyalCaressLanding() {
   )
 
   // Calculate wave animation based on scroll
-  const waveProgress = Math.min(scrollY / (window.innerHeight * 0.8), 1)
+  const waveProgress =
+    isMounted && typeof window !== "undefined" ? Math.min(scrollY / (window.innerHeight * 0.8), 1) : 0
   const waveOffset = waveProgress * 100
 
   const handleVideoPlay = useCallback(() => {
@@ -253,6 +330,14 @@ export default function RoyalCaressLanding() {
   const handleVideoPause = useCallback(() => {
     setIsVideoPlaying(false)
   }, [])
+
+  if (!isMounted) {
+    return (
+      <div className="min-h-screen bg-[#b3123c] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-[#b3123c]">

@@ -45,14 +45,21 @@ TestimonialCard.displayName = "TestimonialCard"
 
 export const OptimizedTestimonialCarousel = React.memo(({ testimonials }: TestimonialCarouselProps) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
     }, 5000)
 
     return () => clearInterval(timer)
-  }, [testimonials.length])
+  }, [testimonials.length, isMounted])
 
   const handlePrevious = useCallback(() => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
@@ -80,6 +87,28 @@ export const OptimizedTestimonialCarousel = React.memo(({ testimonials }: Testim
       )),
     [testimonials, currentTestimonial, handleIndicatorClick],
   )
+
+  if (!isMounted) {
+    return (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center">
+        <div className="text-left">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-4 lg:mb-6 tracking-tight">
+            Real Stories. Honest Pleasure.
+          </h2>
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light mb-6 lg:mb-8">
+            The voices of those who've discovered their own rhythm, their own truth
+          </p>
+        </div>
+        <div className="relative">
+          <div className="bg-white/95 border-0 shadow-lg rounded-3xl backdrop-blur-sm p-6 lg:p-8 xl:p-10 animate-pulse">
+            <div className="h-6 bg-gray-200 rounded mb-4"></div>
+            <div className="h-20 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center">
