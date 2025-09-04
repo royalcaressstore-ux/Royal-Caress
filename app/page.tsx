@@ -60,7 +60,7 @@ const OptimizedTestimonialCarousel = dynamic(
     loading: () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center">
         <div className="text-left">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-4 lg:mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-4 lg:mb-6 xl:mb-10 leading-tight tracking-tight">
             Real Stories. Honest Pleasure.
           </h2>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light mb-6 lg:mb-8">
@@ -78,50 +78,6 @@ const OptimizedTestimonialCarousel = dynamic(
     ),
   },
 )
-
-const ProductCard = React.memo(
-  ({
-    image,
-    alt,
-    title,
-    description,
-    href,
-    buttonText = "DISCOVER",
-  }: {
-    image: string
-    alt: string
-    title: string
-    description: string
-    href: string
-    buttonText?: string
-  }) => (
-    <div className="group cursor-pointer h-full">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={alt}
-          width={640}
-          height={480}
-          className="w-full h-[28rem] object-cover transition-all duration-700 group-hover:scale-105"
-          loading="lazy"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-        <div className="absolute bottom-10 left-10 text-left">
-          <h3 className="text-xl lg:text-2xl font-serif font-medium text-white mb-3 tracking-tight">{title}</h3>
-          <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-6">{description}</p>
-          <Link href={href}>
-            <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
-              {buttonText}
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </div>
-  ),
-)
-
-ProductCard.displayName = "ProductCard"
 
 const FeatureSection = React.memo(
   ({
@@ -159,7 +115,7 @@ const FeatureSection = React.memo(
                   alt={alt}
                   width={800}
                   height={400}
-                  className="w-full h-auto object-cover transition-all duration-700 hover:scale-105"
+                  className="w-full h-auto object-cover object-center transition-all duration-700 hover:scale-105"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
@@ -185,7 +141,9 @@ const FeatureSection = React.memo(
 
           {/* Desktop Layout - Original */}
           <div className="hidden lg:block text-left order-2 lg:order-1">
-            <h2 className={`text-3xl lg:text-4xl font-serif font-light ${textColor} mb-4 tracking-tight`}>{title}</h2>
+            <h2 className={`text-3xl lg:text-4xl xl:text-6xl font-serif font-light ${textColor} mb-4 tracking-tight`}>
+              {title}
+            </h2>
             <p className={`text-lg ${textColor}/90 leading-relaxed font-light mb-6`}>{description}</p>
             <Link href={href}>
               <Button
@@ -204,7 +162,7 @@ const FeatureSection = React.memo(
                 alt={alt}
                 width={800}
                 height={400}
-                className="w-full h-auto object-cover transition-all duration-700 hover:scale-105"
+                className="w-full h-auto object-cover object-center transition-all duration-700 hover:scale-105"
                 loading="lazy"
                 sizes="50vw"
               />
@@ -472,29 +430,89 @@ export default function RoyalCaressLanding() {
           </div>
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-8xl mx-auto mb-16 lg:mb-20">
-            <ProductCard
-              image="/images/red-rose-product.jpg"
-              alt="Body-Safe Materials"
-              title="Body-Safe Materials"
-              description="Medical-grade, phthalate-free silicone that honors your body's wisdom"
-              href="/product/skins-rose-lix"
-            />
+            <div className="group cursor-pointer h-full">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
+                <Image
+                  src="/images/red-rose-product.jpg"
+                  alt="Body-Safe Materials"
+                  width={640}
+                  height={480}
+                  className="w-full h-[28rem] object-cover object-center transition-all duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-10 left-10 text-left">
+                  <h3 className="text-xl lg:text-2xl font-serif font-medium text-white mb-3 tracking-tight">
+                    Body-Safe Materials
+                  </h3>
+                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-6">
+                    Medical-grade, phthalate-free silicone that honors your body's wisdom
+                  </p>
+                  <Link href="/product/skins-rose-lix">
+                    <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
+                      DISCOVER
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-            <ProductCard
-              image="/images/white-rose-gold-product.jpg"
-              alt="Inclusive by Design"
-              title="Inclusive by Design"
-              description="Thoughtfully crafted for all anatomies and identities, celebrating every expression of self"
-              href="/product/satisfyer-love-triangle"
-            />
+            <div className="group cursor-pointer h-full">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
+                <Image
+                  src="/images/white-rose-gold-product.jpg"
+                  alt="Inclusive by Design"
+                  width={640}
+                  height={480}
+                  className="w-full h-[28rem] object-cover object-center transition-all duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-10 left-10 text-left">
+                  <h3 className="text-xl lg:text-2xl font-serif font-medium text-white mb-3 tracking-tight">
+                    Inclusive by Design
+                  </h3>
+                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-6">
+                    Thoughtfully crafted for all anatomies and identities, celebrating every expression of self
+                  </p>
+                  <Link href="/product/satisfyer-love-triangle">
+                    <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
+                      DISCOVER
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-            <ProductCard
-              image="/images/black-product-hand.jpg"
-              alt="Whisper-Quiet Technology"
-              title="Whisper-Quiet Technology"
-              description="Ultra-quiet operation under 50dB for complete privacy and discretion in any setting"
-              href="/product/fifty-shades-mini"
-            />
+            <div className="group cursor-pointer h-full">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
+                <Image
+                  src="/images/black-product-hand.jpg"
+                  alt="Whisper-Quiet Technology"
+                  width={640}
+                  height={480}
+                  className="w-full h-[28rem] object-cover object-center transition-all duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-10 left-10 text-left">
+                  <h3 className="text-xl lg:text-2xl font-serif font-medium text-white mb-3 tracking-tight">
+                    Whisper-Quiet Technology
+                  </h3>
+                  <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-6">
+                    Ultra-quiet operation under 50dB for complete privacy and discretion in any setting
+                  </p>
+                  <Link href="/product/fifty-shades-mini">
+                    <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
+                      DISCOVER
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center">
@@ -638,8 +656,22 @@ export default function RoyalCaressLanding() {
               <h4 className="font-medium mb-4 tracking-wide">Connect</h4>
               <p className="text-white/70 mb-4 text-sm">support@royalcaress.co.uk</p>
               <div className="flex gap-4 mb-4">
-                <Instagram className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
-                <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                <Link
+                  href="https://www.instagram.com/royal.caress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://wa.me/447592253773?text=Hello%21%20Hope%20you%27re%20well.%20I%27d%20love%20to%20speak%20when%20you%20have%20a%20moment.%20Many%20thanks%21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
               </div>
               <CookieSettingsButton />
             </div>
