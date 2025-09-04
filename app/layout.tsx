@@ -1,13 +1,23 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: "Royal Caress - Premium Intimate Wellness",
+  description: "A sanctuary for intimate wellness, celebrating every body and every expression of pleasure.",
+  generator: "v0.app",
+}
+
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-[#b3123c] flex items-center justify-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+    </div>
+  )
 }
 
 export default function RootLayout({
@@ -27,7 +37,7 @@ html {
         `}</style>
       </head>
       <body>
-        {children}
+        <Suspense fallback={<LoadingFallback />}>{children}</Suspense>
         <Analytics />
       </body>
     </html>

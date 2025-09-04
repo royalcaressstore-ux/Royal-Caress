@@ -2,25 +2,32 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { isBrowser } from "@/utils/isBrowser"
 
 export function AgeVerificationModal() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     // Check if user has already verified their age
-    const hasVerifiedAge = localStorage.getItem("ageVerified")
-    if (!hasVerifiedAge) {
-      setIsVisible(true)
+    if (isBrowser()) {
+      const hasVerifiedAge = localStorage.getItem("ageVerified")
+      if (!hasVerifiedAge) {
+        setIsVisible(true)
+      }
     }
   }, [])
 
   const handleYes = () => {
-    localStorage.setItem("ageVerified", "true")
-    setIsVisible(false)
+    if (isBrowser()) {
+      localStorage.setItem("ageVerified", "true")
+      setIsVisible(false)
+    }
   }
 
   const handleNo = () => {
-    window.location.href = "https://www.google.com"
+    if (isBrowser()) {
+      window.location.href = "https://www.google.com"
+    }
   }
 
   if (!isVisible) return null

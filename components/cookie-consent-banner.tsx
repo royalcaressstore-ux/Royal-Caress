@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
 import { X, Settings, Shield, BarChart3, Target, Cookie } from "lucide-react"
 import Link from "next/link"
+import { isBrowser } from "@/utils/isBrowser"
 
 interface CookiePreferences {
   necessary: boolean
@@ -26,9 +27,11 @@ export function CookieConsentBanner() {
 
   useEffect(() => {
     // Check if user has already made cookie choices
-    const cookieConsent = localStorage.getItem("cookieConsent")
-    if (!cookieConsent) {
-      setIsVisible(true)
+    if (isBrowser()) {
+      const cookieConsent = localStorage.getItem("cookieConsent")
+      if (!cookieConsent) {
+        setIsVisible(true)
+      }
     }
   }, [])
 
@@ -57,15 +60,17 @@ export function CookieConsentBanner() {
   }
 
   const saveCookiePreferences = (prefs: CookiePreferences) => {
-    localStorage.setItem(
-      "cookieConsent",
-      JSON.stringify({
-        preferences: prefs,
-        timestamp: new Date().toISOString(),
-        version: "1.0",
-      }),
-    )
-    setIsVisible(false)
+    if (isBrowser()) {
+      localStorage.setItem(
+        "cookieConsent",
+        JSON.stringify({
+          preferences: prefs,
+          timestamp: new Date().toISOString(),
+          version: "1.0",
+        }),
+      )
+      setIsVisible(false)
+    }
 
     // Here you would typically initialize your analytics/marketing scripts
     // based on the user's preferences
