@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Royal Caress - Premium Intimate Wellness",
   description: "A sanctuary for intimate wellness, celebrating every body and every expression of pleasure.",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 }
 
 function LoadingFallback() {
@@ -28,6 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
