@@ -339,8 +339,8 @@ export default function SkinsRoseLixProductPage() {
                 </div>
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">ROTATING TONGUE</h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                realistic tongue movement with
+              <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
+                Realistic tongue movement with
                 <br />
                 customizable rotation patterns
               </p>
@@ -360,8 +360,8 @@ export default function SkinsRoseLixProductPage() {
                 </div>
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">ROSE DESIGN</h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                beautiful and discreet aesthetic
+              <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
+                Beautiful and discreet aesthetic
                 <br />
                 inspired by natural rose petals
               </p>
@@ -381,8 +381,8 @@ export default function SkinsRoseLixProductPage() {
                 </div>
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SUCTION TECHNOLOGY</h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                powerful yet gentle suction with
+              <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
+                Powerful yet gentle suction with
                 <br />7 different intensity levels
               </p>
             </div>
@@ -401,8 +401,8 @@ export default function SkinsRoseLixProductPage() {
                 </div>
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">WHISPER QUIET</h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                ultra-quiet operation under 45dB
+              <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
+                Ultra-quiet operation under 45dB
                 <br />
                 for complete privacy and discretion
               </p>
@@ -426,7 +426,7 @@ export default function SkinsRoseLixProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">ROTATING TONGUE</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                realistic tongue movement with
+                Realistic tongue movement with
                 <br />
                 customizable rotation patterns
               </p>
@@ -447,7 +447,7 @@ export default function SkinsRoseLixProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">ROSE DESIGN</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                beautiful and discreet aesthetic
+                Beautiful and discreet aesthetic
                 <br />
                 inspired by natural rose petals
               </p>
@@ -468,7 +468,7 @@ export default function SkinsRoseLixProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SUCTION TECHNOLOGY</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                powerful yet gentle suction with
+                Powerful yet gentle suction with
                 <br />7 different intensity levels
               </p>
             </div>
@@ -488,7 +488,7 @@ export default function SkinsRoseLixProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">WHISPER QUIET</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                ultra-quiet operation under 45dB
+                Ultra-quiet operation under 45dB
                 <br />
                 for complete privacy and discretion
               </p>

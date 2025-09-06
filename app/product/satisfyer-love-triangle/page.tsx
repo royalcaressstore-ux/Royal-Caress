@@ -295,11 +295,11 @@ export default function SatisfyerLoveTriangleProductPage() {
             </h2>
 
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-light text-white/90">
-              Experience the future of intimate pleasure with the Satisfyer Love Triangle. This revolutionary
-              app-enabled device combines cutting-edge Bluetooth technology with an innovative triangular design for
-              unparalleled couples' experiences. Control vibrations remotely, create custom patterns, sync to music, and
-              explore unlimited possibilities through the intuitive Satisfyer Connect app. Perfect for both intimate
-              moments together and exciting long-distance play.
+              The Satisfyer Love Triangle revolutionizes couples' intimacy with cutting-edge app control technology.
+              Couples can experience unparalleled experiences with this revolutionary app-enabled device, which combines
+              cutting-edge Bluetooth technology with an innovative triangular design. Control vibrations remotely,
+              create custom patterns, sync to music, and explore unlimited possibilities through the intuitive Satisfyer
+              Connect app. Perfect for both intimate moments together and exciting long-distance play.
             </p>
           </div>
         </div>
@@ -400,7 +400,9 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-base sm:text-lg mb-3 tracking-wide">APP CONTROL</h3>
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
-                full smartphone control with unlimited customization options
+                Full smartphone control with
+                <br />
+                unlimited customization options
               </p>
             </div>
 
@@ -424,7 +426,9 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-base sm:text-lg mb-3 tracking-wide">TRIANGULAR DESIGN</h3>
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
-                innovative shape for enhanced stimulation and comfortable wear
+                Innovative shape for enhanced
+                <br />
+                stimulation and comfortable wear
               </p>
             </div>
 
@@ -448,7 +452,9 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-base sm:text-lg mb-3 tracking-wide">BLUETOOTH 4.0</h3>
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
-                reliable wireless connection up to 10 meters range
+                Reliable wireless connection
+                <br />
+                up to 10 meters range
               </p>
             </div>
 
@@ -472,7 +478,9 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-base sm:text-lg mb-3 tracking-wide">MUSIC SYNC</h3>
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
-                vibrations sync to your favorite music for rhythmic pleasure
+                Vibrations sync to your favorite
+                <br />
+                music for rhythmic pleasure
               </p>
             </div>
           </div>
@@ -487,7 +495,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">APP CONTROL</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                full smartphone control with
+                Full smartphone control with
                 <br />
                 unlimited customization options
               </p>
@@ -508,7 +516,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">TRIANGULAR DESIGN</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                innovative shape for enhanced
+                Innovative shape for enhanced
                 <br />
                 stimulation and comfortable wear
               </p>
@@ -529,7 +537,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">BLUETOOTH 4.0</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                reliable wireless connection
+                Reliable wireless connection
                 <br />
                 up to 10 meters range
               </p>
@@ -550,7 +558,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">MUSIC SYNC</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                vibrations sync to your favorite
+                Vibrations sync to your favorite
                 <br />
                 music for rhythmic pleasure
               </p>

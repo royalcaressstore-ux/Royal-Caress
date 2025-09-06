@@ -372,7 +372,7 @@ export default function RoyalCaressLanding() {
                   }`}
                   style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 >
-                  for your rhythm,
+                  We're not just a shop, we're a sanctuary
                 </span>
                 <span
                   className={`inline-block transition-all duration-1000 ease-out delay-700 mr-2 ${
@@ -380,7 +380,7 @@ export default function RoyalCaressLanding() {
                   }`}
                   style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 >
-                  your body,
+                  for your body, your curiosity,
                 </span>
                 <span
                   className={`inline-block transition-all duration-1000 ease-out delay-1000 ${
@@ -388,7 +388,7 @@ export default function RoyalCaressLanding() {
                   }`}
                   style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 >
-                  your curiosity.
+                  and for you to find your rhythm.
                 </span>
               </div>
             </div>
@@ -500,7 +500,7 @@ export default function RoyalCaressLanding() {
                     Whisper-Quiet Technology
                   </h3>
                   <p className="text-white/90 text-sm font-light leading-relaxed mb-4">
-                    Ultra-quiet operation under 50dB for complete privacy and discretion in any setting
+                    Ultra-quiet devices that operate under 50dB for complete privacy and discretion in any setting
                   </p>
                   <Link href="/product/fifty-shades-mini">
                     <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
@@ -587,7 +587,7 @@ export default function RoyalCaressLanding() {
                     Whisper-Quiet Technology
                   </h3>
                   <p className="text-white/90 text-sm font-light leading-relaxed max-w-64 mb-6">
-                    Ultra-quiet operation under 50dB for complete privacy and discretion in any setting
+                    Ultra-quiet devices that operate under 50dB for complete privacy and discretion in any setting
                   </p>
                   <Link href="/product/fifty-shades-mini">
                     <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 text-sm">
@@ -601,8 +601,9 @@ export default function RoyalCaressLanding() {
 
           <div className="text-center">
             <p className="text-xl lg:text-2xl text-[#F5E1DA]/90 leading-relaxed font-light max-w-4xl mx-auto">
-              Our products aren't just tools — they're carefully selected companions for your rituals, your desires,
-              your curiosity. Experience pleasure that feels personal, inclusive, and unapologetically yours.
+              Our pleasure products aren't just toys, they're carefully crafted companions designed to awaken your
+              desires, inspire your rituals, and spark your curiosity. Experience intimacy that feels personal,
+              inclusive pleasure, unapologetically yours.
             </p>
           </div>
         </div>
