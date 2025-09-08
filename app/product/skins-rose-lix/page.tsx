@@ -45,7 +45,7 @@ export default function SkinsRoseLixProductPage() {
     { label: "Charging Time", value: "120 minutes for full charge" },
     { label: "Stimulation Modes", value: "10 modes (7 suction + 3 tongue patterns)" },
     { label: "Water Resistance", value: "IPX7 waterproof" },
-    { label: "Noise Level", value: "< 45 dB whisper-quiet operation" },
+    { label: "Noise Level", value: "Less than 45 dB whisper-quiet operation" },
   ]
 
   const reviews = [
@@ -497,11 +497,234 @@ export default function SkinsRoseLixProductPage() {
         </div>
       </section>
 
-      {/* Product Details */}
-      <section id="specifications" className="py-12 sm:py-16 lg:py-20 bg-rose-50">
+      {/* Product Specifications Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-rose-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left side - Product Image Gallery */}
+            {/* Left side - Main Product Image */}
+            <div className="relative order-1 lg:order-1">
+              <div className="bg-gradient-to-br from-rose-100 to-rose-200 rounded-2xl p-8 sm:p-12">
+                <div className="relative aspect-square">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7440.JPG-dy0YgR51Ha5DERdfuPq4shdlsihNJo.jpeg"
+                    alt="Rose Lix Product Specifications"
+                    fill
+                    className="object-cover rounded-xl"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Specifications */}
+            <div className="order-2 lg:order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-rose-900 mb-8 sm:mb-12 tracking-tight text-center lg:text-left">
+                PRODUCT SPECIFICATIONS
+              </h2>
+
+              <div className="space-y-4">
+                {/* Technical Specifications */}
+                <div className="border-b border-rose-900/20">
+                  <button
+                    onClick={() => toggleSection("technical")}
+                    className="w-full flex items-center justify-between py-4 text-left"
+                  >
+                    <span className="text-sm sm:text-base font-medium text-rose-900 tracking-wide uppercase">
+                      TECHNICAL SPECIFICATIONS
+                    </span>
+                    <svg
+                      className={`w-5 h-5 text-rose-900 transition-transform ${
+                        expandedSection === "technical" ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedSection === "technical" && (
+                    <div className="pb-4 space-y-3">
+                      {specifications.map((spec, index) => (
+                        <div key={index} className="flex justify-between py-2">
+                          <span className="text-sm text-rose-900/70 font-medium">{spec.label}</span>
+                          <span className="text-sm text-rose-900 text-right max-w-[60%]">{spec.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Package Contents */}
+                <div className="border-b border-rose-900/20">
+                  <button
+                    onClick={() => toggleSection("package")}
+                    className="w-full flex items-center justify-between py-4 text-left"
+                  >
+                    <span className="text-sm sm:text-base font-medium text-rose-900 tracking-wide uppercase">
+                      PACKAGE CONTENTS
+                    </span>
+                    <svg
+                      className={`w-5 h-5 text-rose-900 transition-transform ${
+                        expandedSection === "package" ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedSection === "package" && (
+                    <div className="pb-4">
+                      <ul className="space-y-2 text-sm text-rose-900/80">
+                        <li>• Rose Lix stimulator device</li>
+                        <li>• USB charging cable</li>
+                        <li>• User manual in multiple languages</li>
+                        <li>• Discreet storage pouch</li>
+                        <li>• Warranty card</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                {/* Special Features */}
+                <div className="border-b border-rose-900/20">
+                  <button
+                    onClick={() => toggleSection("features")}
+                    className="w-full flex items-center justify-between py-4 text-left"
+                  >
+                    <span className="text-sm sm:text-base font-medium text-rose-900 tracking-wide uppercase">
+                      SPECIAL FEATURES
+                    </span>
+                    <svg
+                      className={`w-5 h-5 text-rose-900 transition-transform ${
+                        expandedSection === "features" ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedSection === "features" && (
+                    <div className="pb-4">
+                      <ul className="space-y-2 text-sm text-rose-900/80">
+                        <li>• Revolutionary rotating tongue technology</li>
+                        <li>• 7 suction intensity levels</li>
+                        <li>• 3 unique tongue rotation patterns</li>
+                        <li>• Whisper-quiet operation under 45dB</li>
+                        <li>• IPX7 waterproof design</li>
+                        <li>• Rose-inspired aesthetic for discretion</li>
+                        <li>• Body-safe premium silicone construction</li>
+                        <li>• Memory function remembers last setting</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                {/* Warranty */}
+                <div className="border-b border-rose-900/20">
+                  <button
+                    onClick={() => toggleSection("warranty")}
+                    className="w-full flex items-center justify-between py-4 text-left"
+                  >
+                    <span className="text-sm sm:text-base font-medium text-rose-900 tracking-wide uppercase">
+                      WARRANTY
+                    </span>
+                    <svg
+                      className={`w-5 h-5 text-rose-900 transition-transform ${
+                        expandedSection === "warranty" ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedSection === "warranty" && (
+                    <div className="pb-4">
+                      <div className="space-y-3 text-sm text-rose-900/80">
+                        <p>
+                          <strong>1-Year Limited Warranty</strong>
+                        </p>
+                        <p>Your Rose Lix is covered against manufacturing defects for 12 months from purchase date.</p>
+                        <p>
+                          <strong>Warranty Coverage:</strong>
+                        </p>
+                        <ul className="space-y-1 ml-4">
+                          <li>• Motor and electronic components</li>
+                          <li>• Charging functionality</li>
+                          <li>• Material defects</li>
+                        </ul>
+                        <p>
+                          <strong>Not Covered:</strong> Normal wear, misuse, or damage from improper cleaning.
+                        </p>
+                        <p>Contact support@royalcaress.co.uk for warranty claims.</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Care & Safety */}
+                <div>
+                  <button
+                    onClick={() => toggleSection("care")}
+                    className="w-full flex items-center justify-between py-4 text-left"
+                  >
+                    <span className="text-sm sm:text-base font-medium text-rose-900 tracking-wide uppercase">
+                      CARE & SAFETY
+                    </span>
+                    <svg
+                      className={`w-5 h-5 text-rose-900 transition-transform ${
+                        expandedSection === "care" ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedSection === "care" && (
+                    <div className="pb-4">
+                      <div className="space-y-3 text-sm text-rose-900/80">
+                        <p>
+                          <strong>Cleaning Instructions:</strong>
+                        </p>
+                        <ul className="space-y-1 ml-4">
+                          <li>• Clean before and after each use</li>
+                          <li>• Use mild soap and warm water</li>
+                          <li>• Pat dry with lint-free cloth</li>
+                          <li>• Store in provided pouch when dry</li>
+                        </ul>
+                        <p>
+                          <strong>Safety Guidelines:</strong>
+                        </p>
+                        <ul className="space-y-1 ml-4">
+                          <li>• For external use only</li>
+                          <li>• Do not use if device is damaged</li>
+                          <li>• Charge only with provided cable</li>
+                          <li>• Keep away from extreme temperatures</li>
+                          <li>• Not suitable for use during pregnancy</li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Details Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left side - Main Product Image */}
             <div className="relative order-1 lg:order-1">
               <div className="bg-gradient-to-br from-rose-50 to-rose-100 rounded-2xl p-6 sm:p-8">
                 {/* Main Image */}

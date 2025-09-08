@@ -51,7 +51,7 @@ export default function FiftyShadesProductPage() {
     { label: "Product Name", value: "Fifty Shades of Grey Sensation Rechargeable Mini Wand Vibrator" },
     { label: "Category", value: "Premium licensed mini wand vibrator" },
     { label: "Technology", value: "High-power motor with deep vibration" },
-    { label: "Materials", value: "Premium silicone with silver details" },
+    { label: "Materials", value: "Premium silicone with silver metallic details" },
     { label: "Dimensions", value: "10.2 cm x 9 cm x 4 cm" },
     { label: "Weight", value: "90 grams" },
     { label: "Colour", value: "Deep grey with silver details" },
@@ -376,11 +376,11 @@ export default function FiftyShadesProductPage() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">PREMIUM DESIGN</h3>
+              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SILVER DETAILS</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 inspired by the franchise's signature
                 <br />
-                aesthetic
+                aesthetic with premium metallic finish
               </p>
             </div>
 
@@ -470,11 +470,11 @@ export default function FiftyShadesProductPage() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">PREMIUM DESIGN</h3>
+              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SILVER DETAILS</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 inspired by the franchise's signature
                 <br />
-                aesthetic
+                aesthetic with premium metallic finish
               </p>
             </div>
 
@@ -605,8 +605,10 @@ export default function FiftyShadesProductPage() {
                     <ul className="space-y-2 sm:space-y-3 text-gray-900/80 text-sm sm:text-base">
                       <li>• Fifty Shades of Grey Sensation Mini Wand</li>
                       <li>• USB charging cable</li>
+                      <li>• Premium instruction manual</li>
                       <li>• Luxury storage case</li>
                       <li>• Numbered authenticity certificate</li>
+                      <li>• "Moments Fifty Shades" guide</li>
                     </ul>
                   </div>
                 )}
