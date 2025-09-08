@@ -88,7 +88,7 @@ export default function FiftyShadesProductPage() {
       date: "3 weeks ago",
       title: "Perfect Anniversary Gift for Couples",
       content:
-        "We purchased the Sensation Mini Wand as a wedding anniversary gift, inspired by the sophisticated aesthetic of the franchise. The quality is incomparable - from the ultra-soft silicone to the elegant metallic details. As a body massager, it effectively relieves tension after long hours at the office, but truly shines in intimate moments. The multiple modes offer variety for different moods, and the variable intensity allows perfect customisation. Elizabeth particularly appreciates the flexible head that adapts comfortably to different areas. A luxurious investment that brought new dimension to our intimacy after 15 years of marriage.",
+        "We purchased the Sensation Mini Wand as a wedding anniversary gift, inspired by the sophisticated aesthetic of the franchise. The quality is incomparable - from the ultra-soft silicone to the elegant details. As a body massager, it effectively relieves tension after long hours at the office, but truly shines in intimate moments. The multiple modes offer variety for different moods, and the variable intensity allows perfect customisation. Elizabeth particularly appreciates the flexible head that adapts comfortably to different areas. A luxurious investment that brought new dimension to our intimacy after 15 years of marriage.",
       helpful: 31,
       notHelpful: 2,
       verified: true,
@@ -103,7 +103,7 @@ export default function FiftyShadesProductPage() {
       date: "1 month ago",
       title: "Exceptional Quality for Collectors",
       content:
-        "As a collector of official Fifty Shades items, I can attest that this is one of the most well-executed products in the franchise. The numbered authenticity certificate and premium packaging make this a genuine collectible item. But unlike many licensed products that prioritise appearance over function, the Sensation Mini Wand is exceptional in both aspects. The deep vibration is remarkably different from other wands - less superficial buzzing and more resonant intensity. The metallic details aren't just aesthetic; they add satisfying weight and balance to the product. Absolutely worth the investment for fans and collectors.",
+        "As a collector of official Fifty Shades items, I can attest that this is one of the most well-executed products in the franchise. The numbered authenticity certificate and premium packaging make this a genuine collectible item. But unlike many licensed products that prioritise appearance over function, the Sensation Mini Wand is exceptional in both aspects. The deep vibration is remarkably different from other wands - less superficial buzzing and more resonant intensity. Absolutely worth the investment for fans and collectors.",
       helpful: 18,
       notHelpful: 0,
       verified: true,
@@ -294,9 +294,9 @@ export default function FiftyShadesProductPage() {
 
           <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-light text-white/90 px-2">
             Experience revolutionary pleasure with our most sophisticated compact design. The Fifty Shades of Grey
-            Sensation Mini Wand introduces high-power motor technology that delivers deep, resonant vibrations targeting
-            your most sensitive areas with precision-engineered intensity. With 20 customisable modes including 15
-            unique patterns and 5 intensity levels, this isn't just pleasure—it's an art form crafted for those who
+            Sensation Mini Wand introduces high-power motor technology that delivers deep, resonant vibrations which
+            target your most sensitive areas with precision-engineered intensity. With 20 customisable modes including
+            15 unique patterns and 5 intensity levels, this isn't just pleasure—it's an art form crafted for those who
             demand excellence in every aspect of their intimate wellness journey.
           </p>
         </div>
@@ -357,7 +357,7 @@ export default function FiftyShadesProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">FLEXIBLE HEAD</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                adapts to your body's unique contours
+                Adapts to your body's unique contours
                 <br />
                 for personalised comfort and precision
               </p>
@@ -376,11 +376,11 @@ export default function FiftyShadesProductPage() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SILVER DETAILS</h3>
+              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">PREMIUM DESIGN</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                inspired by the franchise's signature
+                Inspired by the franchise's signature aesthetic
                 <br />
-                aesthetic with premium metallic finish
+                with premium metallic finish
               </p>
             </div>
 
@@ -399,7 +399,7 @@ export default function FiftyShadesProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">AUTHENTICITY CERTIFICATE</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                numbered certificate guaranteeing
+                Numbered certificate guaranteeing
                 <br />
                 genuine Fifty Shades collection item
               </p>
@@ -426,7 +426,7 @@ export default function FiftyShadesProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">E.L. JAMES APPROVED</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                personally endorsed by the author
+                Personally endorsed by the author
                 <br />
                 of the Fifty Shades trilogy
               </p>
@@ -451,7 +451,7 @@ export default function FiftyShadesProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">FLEXIBLE HEAD</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                adapts to your body's unique contours
+                Adapts to your body's unique contours
                 <br />
                 for personalised comfort and precision
               </p>
@@ -470,11 +470,11 @@ export default function FiftyShadesProductPage() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SILVER DETAILS</h3>
+              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">PREMIUM DESIGN</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                inspired by the franchise's signature
+                Inspired by the franchise's signature aesthetic
                 <br />
-                aesthetic with premium metallic finish
+                with premium metallic finish
               </p>
             </div>
 
@@ -494,7 +494,7 @@ export default function FiftyShadesProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">AUTHENTICITY CERTIFICATE</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                numbered certificate guaranteeing
+                Numbered certificate guaranteeing
                 <br />
                 genuine Fifty Shades collection item
               </p>
@@ -521,7 +521,7 @@ export default function FiftyShadesProductPage() {
               </div>
               <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">E.L. JAMES APPROVED</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                personally endorsed by the author
+                Personally endorsed by the author
                 <br />
                 of the Fifty Shades trilogy
               </p>

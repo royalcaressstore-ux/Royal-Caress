@@ -353,16 +353,7 @@ export default function RoyalCaressLanding() {
                   }`}
                   style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 >
-                  Not just a shop —
-                </span>
-                <span className="mx-2"></span>
-                <span
-                  className={`inline-block transition-all duration-1000 ease-out delay-300 ${
-                    whisperStep >= 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  }`}
-                  style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
-                >
-                  a sanctuary
+                  We're not just a shop, we're a sanctuary
                 </span>
               </div>
               <div className="italic">
@@ -372,7 +363,7 @@ export default function RoyalCaressLanding() {
                   }`}
                   style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 >
-                  We're not just a shop, we're a sanctuary
+                  for your body,
                 </span>
                 <span
                   className={`inline-block transition-all duration-1000 ease-out delay-700 mr-2 ${
@@ -380,7 +371,7 @@ export default function RoyalCaressLanding() {
                   }`}
                   style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
                 >
-                  for your body, your curiosity,
+                  your curiosity,
                 </span>
                 <span
                   className={`inline-block transition-all duration-1000 ease-out delay-1000 ${

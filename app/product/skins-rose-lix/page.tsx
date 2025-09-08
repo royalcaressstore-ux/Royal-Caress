@@ -812,9 +812,9 @@ export default function SkinsRoseLixProductPage() {
               {/* Product Description */}
               <div className="mb-6 sm:mb-8">
                 <p className="text-rose-900/80 leading-relaxed text-sm sm:text-base">
-                  The Skins Rose Buddies - The Rose Lix combines revolutionary rotating tongue technology with powerful
-                  suction in a beautifully discreet rose design. Experience 10 unique modes of stimulation with
-                  whisper-quiet operation and waterproof construction for versatile pleasure.
+                  The Skins Rose Buddies: The Rose Lix combines revolutionary rotating-tongue technology with powerful
+                  suction in a beautifully discreet rose design. Experience 10 unique modes of stimulation,
+                  whisper-quiet operation, and waterproof construction for versatile pleasure.
                 </p>
               </div>
 
