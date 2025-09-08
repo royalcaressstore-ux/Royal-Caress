@@ -616,8 +616,8 @@ export default function RoyalCaressLanding() {
       <FeatureSection
         image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Wyo2ZJQlqb7bToHrIrLzckaTCwmt3d.png"
         alt="Premium intimate wellness product"
-        title="Savor Every Sensation"
-        description="A rose with a rotating tongue that awakens new sensations. Experience oral pleasure reimagined with whisper-quiet technology and body-safe materials that honor your desires."
+        title="Hidden Depths of Pleasure"
+        description="Experience revolutionary pleasure with our most sophisticated compact design. The Fifty Shades of Grey Sensation Mini Wand delivers deep, resonant vibrations with 20 customizable modes, flexible head technology, and premium materials that redefine intimate wellness."
         href="/product/fifty-shades-mini"
       />
 
@@ -693,7 +693,7 @@ export default function RoyalCaressLanding() {
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-serif font-light text-white mb-6 tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-serif font-light mb-6 tracking-tight">
             Want More Than Just a Product?
           </h2>
           <p className="text-xl lg:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
