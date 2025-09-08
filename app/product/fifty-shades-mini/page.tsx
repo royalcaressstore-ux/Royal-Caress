@@ -380,7 +380,7 @@ export default function FiftyShadesProductPage() {
               <p className="text-white/70 text-sm leading-relaxed">
                 Inspired by the franchise's signature aesthetic
                 <br />
-                with premium metallic finish
+                and sophisticated design elements
               </p>
             </div>
 
@@ -474,7 +474,7 @@ export default function FiftyShadesProductPage() {
               <p className="text-white/70 text-sm leading-relaxed">
                 Inspired by the franchise's signature aesthetic
                 <br />
-                with premium metallic finish
+                and sophisticated design elements
               </p>
             </div>
 
