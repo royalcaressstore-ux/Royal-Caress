@@ -278,13 +278,23 @@ export default function FiftyShadesProductPage() {
       </nav>
 
       {/* Hero Section */}
-      <section id="overview" className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
+      <section id="overview" className="relative h-[50vh] sm:h-[100vh] overflow-hidden">
         <div className="absolute inset-0">
+          {/* Mobile Image */}
+          <Image
+            src="/images/fifty-shades-mobile-banner-updated.png"
+            alt="Fifty Shades Hero"
+            fill
+            className="object-cover object-top sm:hidden"
+            priority
+            sizes="100vw"
+          />
+          {/* Desktop Image */}
           <Image
             src="/images/fifty-shades-hero.jpg"
             alt="Fifty Shades Hero"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center hidden sm:block"
             priority
             sizes="100vw"
           />

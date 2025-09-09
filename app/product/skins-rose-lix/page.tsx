@@ -335,6 +335,12 @@ export default function SkinsRoseLixProductPage() {
       {/* Features Section */}
       <section id="features" className="py-16 sm:py-20 lg:py-24 bg-rose-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-sm sm:text-base font-medium tracking-[0.2em] text-white/80 uppercase mb-8">
+              PREMIUM FEATURES
+            </h2>
+          </div>
+
           {/* Mobile Layout - Vertical Stack */}
           <div className="block md:hidden space-y-8">
             <div className="text-center p-6">
