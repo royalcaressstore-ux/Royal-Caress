@@ -10,17 +10,27 @@ import {
   Star,
   ChevronDown,
   ChevronUp,
-  Play,
   ThumbsUp,
   ThumbsDown,
   Flag,
   Menu,
   X,
   Smartphone,
+  Instagram,
+  MessageCircle,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import dynamic from "next/dynamic"
+
+const CookieSettingsButton = dynamic(
+  () => import("@/components/cookie-settings-button").then((mod) => ({ default: mod.CookieSettingsButton })),
+  {
+    ssr: false,
+    loading: () => <div className="w-24 h-8"></div>,
+  },
+)
 
 export default function SatisfyerLoveTriangleProductPage() {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -107,7 +117,7 @@ export default function SatisfyerLoveTriangleProductPage() {
       helpful: 42,
       notHelpful: 2,
       verified: true,
-      customerSince: "Customer since 2023",
+      customerSince: "Customers since 2023",
     },
     {
       id: 4,
@@ -157,11 +167,7 @@ export default function SatisfyerLoveTriangleProductPage() {
   return (
     <div className="min-h-screen bg-[#E1B88B] overflow-x-hidden">
       {/* Floating Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#E1B88B]/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-        }`}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#E1B88B] shadow-lg md:bg-[#E1B88B]/95 md:backdrop-blur-md transition-all duration-300">
         <div className="w-full max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Replace text logo with image logo */}
@@ -220,7 +226,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               </div>
 
               <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-white text-[#E1B88B] hover:bg-white/90 px-3 py-1.5 rounded-full font-medium text-xs">
+                <Button className="bg-white text-[#E1B88B] hover:bg-white/90 px-2 sm:px-3 py-1.5 rounded-full font-medium text-xs whitespace-nowrap">
                   BUY NOW
                 </Button>
               </Link>
@@ -445,7 +451,7 @@ export default function SatisfyerLoveTriangleProductPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1.5}
-                      d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
+                      d="M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
                     />
                   </svg>
                 </div>
@@ -780,9 +786,6 @@ export default function SatisfyerLoveTriangleProductPage() {
                       />
                     </button>
                   ))}
-                  <button className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#fef7f4] border-2 border-dashed border-[#fee5d9] flex items-center justify-center flex-shrink-0">
-                    <Play className="w-3 h-3 sm:w-4 sm:h-4 text-[#f5c5a0]" />
-                  </button>
                 </div>
               </div>
 
@@ -807,9 +810,6 @@ export default function SatisfyerLoveTriangleProductPage() {
                       />
                     </button>
                   ))}
-                  <button className="w-20 h-20 rounded-xl bg-[#fef7f4] border-2 border-dashed border-[#fee5d9] flex items-center justify-center">
-                    <Play className="w-6 h-6 text-[#f5c5a0]" />
-                  </button>
                 </div>
 
                 <div className="flex-1">
@@ -842,32 +842,17 @@ export default function SatisfyerLoveTriangleProductPage() {
                 App-Controlled Couples Vibrator
               </p>
 
-              <div className="flex items-center mb-6">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-4 h-4 sm:w-5 sm:h-5 ${i < 4 ? "fill-[#E1B88B] text-[#E1B88B]" : "text-[#E1B88B]/20"}`}
-                    />
-                  ))}
-                </div>
-                <span className="ml-2 text-[#E1B88B]/70 text-xs sm:text-sm">4.6 (73 reviews)</span>
+              <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                <div className="text-2xl sm:text-3xl font-serif font-light text-[#E1B88B]">€52.99</div>
+                <Badge variant="outline" className="border-amber-600 text-amber-700 bg-amber-100 text-xs font-medium">
+                  Shipping not included.
+                </Badge>
               </div>
-
-              {/* Color Display */}
-              <div className="mb-6 sm:mb-8">
-                <p className="text-[#E1B88B] font-medium mb-4 flex items-center text-sm sm:text-base">
-                  <span className="w-4 h-4 rounded-full mr-2 bg-white border border-[#E1B88B]"></span>
-                  PURE WHITE WITH SILVER ACCENTS
-                </p>
-              </div>
-
-              <div className="text-2xl sm:text-3xl font-serif font-light text-[#E1B88B] mb-6 sm:mb-8">€52.99</div>
 
               {/* Buy Now Button */}
               <div className="mb-6 sm:mb-8">
                 <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-[#E1B88B] text-white hover:bg-[#D4A574] py-3 sm:py-4 rounded-full font-medium text-sm sm:text-lg">
+                  <Button className="w-full bg-[#E1B88B] text-white hover:bg-[#D4A574] py-3 rounded-full font-medium text-sm sm:text-lg">
                     BUY NOW
                   </Button>
                 </Link>
@@ -1017,25 +1002,56 @@ export default function SatisfyerLoveTriangleProductPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-[#E1B88B] text-white py-12 sm:py-16 pb-20 sm:pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="sm:col-span-2">
-              <h3 className="text-xl sm:text-2xl font-serif font-light mb-4 tracking-wide">Royal Caress</h3>
-              <p className="text-white/70 leading-relaxed font-light max-w-md text-sm sm:text-base">
+      <footer className="py-16 px-6 lg:px-12 bg-[#0B0B0B] text-white pb-20 sm:pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl font-serif font-light mb-4 tracking-wide">Royal Caress</h3>
+              <p className="text-white/70 leading-relaxed font-light max-w-md">
                 A sanctuary for intimate wellness, celebrating every body and every expression of pleasure.
               </p>
             </div>
 
-            {/* Navigate section removed */}
-
             <div>
-              <h4 className="font-medium mb-4 tracking-wide text-sm sm:text-base">Connect</h4>
+              <h4 className="font-medium mb-4 tracking-wide">Connect</h4>
               <p className="text-white/70 mb-4 text-sm">support@royalcaress.co.uk</p>
+              <div className="flex gap-4 mb-4">
+                <Link
+                  href="https://www.instagram.com/royal.caress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://wa.me/447592253773?text=Hello%21%20Hope%20you%27re%20well.%20I%27d%20love%20to%20speak%20when%20you%20have%20a%20moment.%20Many%20thanks%21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@royal.caress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.43z" />
+                  </svg>
+                </Link>
+              </div>
+              <CookieSettingsButton />
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 mt-8 sm:mt-12 text-center text-white/60 text-xs sm:text-sm font-light">
+          <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm font-light">
             <p>© 2025 Royal Caress Ltd — All rights reserved</p>
           </div>
         </div>

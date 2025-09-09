@@ -18,10 +18,21 @@ import {
   Flag,
   Menu,
   X,
+  Instagram,
+  MessageCircle,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import dynamic from "next/dynamic"
+
+const CookieSettingsButton = dynamic(
+  () => import("@/components/cookie-settings-button").then((mod) => ({ default: mod.CookieSettingsButton })),
+  {
+    ssr: false,
+    loading: () => <div className="w-24 h-8"></div>,
+  },
+)
 
 export default function FiftyShadesProductPage() {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -157,11 +168,7 @@ export default function FiftyShadesProductPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Floating Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-gray-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-        }`}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 shadow-lg md:bg-gray-900/95 md:backdrop-blur-md transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
@@ -371,7 +378,7 @@ export default function FiftyShadesProductPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1.5}
-                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-.181h4.914a1 1 0 00.951-.69l1.519-4.674z"
                     />
                   </svg>
                 </div>
@@ -465,7 +472,7 @@ export default function FiftyShadesProductPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1.5}
-                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-.181h4.914a1 1 0 00.951-.69l1.519-4.674z"
                     />
                   </svg>
                 </div>
@@ -533,171 +540,169 @@ export default function FiftyShadesProductPage() {
       {/* Product Details */}
       <section id="specifications" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left side - Product Image */}
-            <div className="relative order-2 lg:order-1">
-              <div className="aspect-square overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/fifty-shades-anexo1-updated.jpg"
-                  alt="Product details"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+          <h2 className="text-2xl sm:text-3xl font-serif font-light text-gray-900 mb-6 sm:mb-8 tracking-tight text-center">
+            PRODUCT SPECIFICATIONS
+          </h2>
+
+          {/* Product Image */}
+          <div className="relative mb-8 lg:mb-12">
+            <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-2xl">
+              <Image
+                src="/images/fifty-shades-anexo1-updated.jpg"
+                alt="Product details"
+                width={600}
+                height={600}
+                className="w-full h-full object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+            </div>
+          </div>
+
+          {/* Specifications Content */}
+          <div className="max-w-2xl mx-auto">
+            {/* Specifications */}
+            <div className="mb-6 sm:mb-8">
+              <button
+                onClick={() => toggleSection("specifications")}
+                className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
+              >
+                <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">
+                  TECHNICAL SPECIFICATIONS
+                </span>
+                {expandedSection === "specifications" ? (
+                  <ChevronUp className="w-5 h-5 text-gray-900" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-900" />
+                )}
+              </button>
+
+              {expandedSection === "specifications" && (
+                <div className="py-4 sm:py-6 space-y-3 sm:space-y-4">
+                  {specifications.map((spec, index) => (
+                    <div key={index} className="flex justify-between items-start">
+                      <span className="text-gray-900/70 font-medium text-sm sm:text-base flex-1 pr-4">
+                        {spec.label}:
+                      </span>
+                      <span className="text-gray-900 font-medium text-right text-sm sm:text-base flex-1">
+                        {spec.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Right side - Specifications */}
-            <div className="order-1 lg:order-2">
-              <h2 className="text-2xl sm:text-3xl font-serif font-light text-gray-900 mb-6 sm:mb-8 tracking-tight">
-                PRODUCT SPECIFICATIONS
-              </h2>
-
-              {/* Specifications */}
-              <div className="mb-6 sm:mb-8">
-                <button
-                  onClick={() => toggleSection("specifications")}
-                  className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
-                >
-                  <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">
-                    TECHNICAL SPECIFICATIONS
-                  </span>
-                  {expandedSection === "specifications" ? (
-                    <ChevronUp className="w-5 h-5 text-gray-900" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-900" />
-                  )}
-                </button>
-
-                {expandedSection === "specifications" && (
-                  <div className="py-4 sm:py-6 space-y-3 sm:space-y-4">
-                    {specifications.map((spec, index) => (
-                      <div key={index} className="flex justify-between items-start">
-                        <span className="text-gray-900/70 font-medium text-sm sm:text-base flex-1 pr-4">
-                          {spec.label}:
-                        </span>
-                        <span className="text-gray-900 font-medium text-right text-sm sm:text-base flex-1">
-                          {spec.value}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+            {/* What's Included */}
+            <div className="mb-6 sm:mb-8">
+              <button
+                onClick={() => toggleSection("content")}
+                className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
+              >
+                <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">PACKAGE CONTENTS</span>
+                {expandedSection === "content" ? (
+                  <ChevronUp className="w-5 h-5 text-gray-900" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-900" />
                 )}
-              </div>
+              </button>
 
-              {/* What's Included */}
-              <div className="mb-6 sm:mb-8">
-                <button
-                  onClick={() => toggleSection("content")}
-                  className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
-                >
-                  <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">PACKAGE CONTENTS</span>
-                  {expandedSection === "content" ? (
-                    <ChevronUp className="w-5 h-5 text-gray-900" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-900" />
-                  )}
-                </button>
+              {expandedSection === "content" && (
+                <div className="py-4 sm:py-6">
+                  <ul className="space-y-2 sm:space-y-3 text-gray-900/80 text-sm sm:text-base">
+                    <li>• Fifty Shades of Grey Sensation Mini Wand</li>
+                    <li>• USB charging cable</li>
+                    <li>• Premium instruction manual</li>
+                    <li>• Luxury storage case</li>
+                    <li>• Numbered authenticity certificate</li>
+                    <li>• "Moments Fifty Shades" guide</li>
+                  </ul>
+                </div>
+              )}
+            </div>
 
-                {expandedSection === "content" && (
-                  <div className="py-4 sm:py-6">
-                    <ul className="space-y-2 sm:space-y-3 text-gray-900/80 text-sm sm:text-base">
-                      <li>• Fifty Shades of Grey Sensation Mini Wand</li>
-                      <li>• USB charging cable</li>
-                      <li>• Premium instruction manual</li>
-                      <li>• Luxury storage case</li>
-                      <li>• Numbered authenticity certificate</li>
-                      <li>• "Moments Fifty Shades" guide</li>
-                    </ul>
-                  </div>
+            {/* Special Features */}
+            <div className="mb-6 sm:mb-8">
+              <button
+                onClick={() => toggleSection("special-features")}
+                className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
+              >
+                <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">SPECIAL FEATURES</span>
+                {expandedSection === "special-features" ? (
+                  <ChevronUp className="w-5 h-5 text-gray-900" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-900" />
                 )}
-              </div>
+              </button>
 
-              {/* Special Features */}
-              <div className="mb-6 sm:mb-8">
-                <button
-                  onClick={() => toggleSection("special-features")}
-                  className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
-                >
-                  <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">SPECIAL FEATURES</span>
-                  {expandedSection === "special-features" ? (
-                    <ChevronUp className="w-5 h-5 text-gray-900" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-900" />
-                  )}
-                </button>
+              {expandedSection === "special-features" && (
+                <div className="py-4 sm:py-6">
+                  <ul className="space-y-2 sm:space-y-3 text-gray-900/80 text-sm sm:text-base">
+                    <li>• Flexible head for personalised comfort</li>
+                    <li>• Silver metallic details inspired by franchise aesthetic</li>
+                    <li>• Numbered authenticity certificate</li>
+                    <li>• Personally approved by author E.L. James</li>
+                    <li>• High-power motor with deep vibration technology</li>
+                    <li>• 100% waterproof design</li>
+                  </ul>
+                </div>
+              )}
+            </div>
 
-                {expandedSection === "special-features" && (
-                  <div className="py-4 sm:py-6">
-                    <ul className="space-y-2 sm:space-y-3 text-gray-900/80 text-sm sm:text-base">
-                      <li>• Flexible head for personalised comfort</li>
-                      <li>• Silver metallic details inspired by franchise aesthetic</li>
-                      <li>• Numbered authenticity certificate</li>
-                      <li>• Personally approved by author E.L. James</li>
-                      <li>• High-power motor with deep vibration technology</li>
-                      <li>• 100% waterproof design</li>
-                    </ul>
-                  </div>
+            {/* Warranty */}
+            <div className="mb-6 sm:mb-8">
+              <button
+                onClick={() => toggleSection("warranty")}
+                className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
+              >
+                <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">WARRANTY</span>
+                {expandedSection === "warranty" ? (
+                  <ChevronUp className="w-5 h-5 text-gray-900" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-900" />
                 )}
-              </div>
+              </button>
 
-              {/* Warranty */}
-              <div className="mb-6 sm:mb-8">
-                <button
-                  onClick={() => toggleSection("warranty")}
-                  className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
-                >
-                  <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">WARRANTY</span>
-                  {expandedSection === "warranty" ? (
-                    <ChevronUp className="w-5 h-5 text-gray-900" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-900" />
-                  )}
-                </button>
+              {expandedSection === "warranty" && (
+                <div className="py-4 sm:py-6 text-gray-900/80 text-sm sm:text-base">
+                  <p className="mb-4">
+                    Royal Caress stands behind the quality of every product. Your Fifty Shades of Grey Sensation Mini
+                    Wand comes with a comprehensive 2-year warranty (730 days) covering manufacturing defects.
+                  </p>
+                  <p>
+                    Our discreet customer service team is available to assist with any questions or concerns about your
+                    purchase.
+                  </p>
+                </div>
+              )}
+            </div>
 
-                {expandedSection === "warranty" && (
-                  <div className="py-4 sm:py-6 text-gray-900/80 text-sm sm:text-base">
-                    <p className="mb-4">
-                      Royal Caress stands behind the quality of every product. Your Fifty Shades of Grey Sensation Mini
-                      Wand comes with a comprehensive 2-year warranty (730 days) covering manufacturing defects.
-                    </p>
-                    <p>
-                      Our discreet customer service team is available to assist with any questions or concerns about
-                      your purchase.
-                    </p>
-                  </div>
+            {/* Care Instructions */}
+            <div>
+              <button
+                onClick={() => toggleSection("care")}
+                className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
+              >
+                <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">CARE & SAFETY</span>
+                {expandedSection === "care" ? (
+                  <ChevronUp className="w-5 h-5 text-gray-900" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-900" />
                 )}
-              </div>
+              </button>
 
-              {/* Care Instructions */}
-              <div>
-                <button
-                  onClick={() => toggleSection("care")}
-                  className="w-full flex items-center justify-between py-3 sm:py-4 border-b border-gray-900/20 text-left"
-                >
-                  <span className="text-base sm:text-lg font-medium text-gray-900 tracking-wide">CARE & SAFETY</span>
-                  {expandedSection === "care" ? (
-                    <ChevronUp className="w-5 h-5 text-gray-900" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-900" />
-                  )}
-                </button>
-
-                {expandedSection === "care" && (
-                  <div className="py-4 sm:py-6 text-gray-900/80 text-sm sm:text-base">
-                    <p className="mb-4">
-                      Clean before and after each use with warm water and mild soap or toy cleaner. Being 100%
-                      waterproof, it can be fully submerged for thorough cleaning. Store in the provided luxury case in
-                      a cool, dry place.
-                    </p>
-                    <p>
-                      Use only water-based lubricants. Avoid silicone-based products as they may damage the premium
-                      silicone surface.
-                    </p>
-                  </div>
-                )}
-              </div>
+              {expandedSection === "care" && (
+                <div className="py-4 sm:py-6 text-gray-900/80 text-sm sm:text-base">
+                  <p className="mb-4">
+                    Clean before and after each use with warm water and mild soap or toy cleaner. Being 100% waterproof,
+                    it can be fully submerged for thorough cleaning. Store in the provided luxury case in a cool, dry
+                    place.
+                  </p>
+                  <p>
+                    Use only water-based lubricants. Avoid silicone-based products as they may damage the premium
+                    silicone surface.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -883,7 +888,12 @@ export default function FiftyShadesProductPage() {
                 </p>
               </div>
 
-              <div className="text-2xl sm:text-3xl font-serif font-light text-gray-900 mb-6 sm:mb-8">€39.98</div>
+              <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                <div className="text-2xl sm:text-3xl font-serif font-light text-gray-900">€39.98</div>
+                <Badge variant="outline" className="border-gray-700 text-gray-800 bg-gray-100 text-xs font-medium">
+                  Shipping not included.
+                </Badge>
+              </div>
 
               {/* Buy Now Button */}
               <div className="mb-6 sm:mb-8">
@@ -1025,14 +1035,8 @@ export default function FiftyShadesProductPage() {
 
             {/* Right side - Individual Reviews */}
             <div className="lg:col-span-2">
-              <div className="flex items-center justify-between mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8">
                 <h3 className="text-lg sm:text-xl font-medium text-gray-900">Reviews</h3>
-                <Button
-                  variant="outline"
-                  className="border-gray-900/20 text-gray-900 hover:bg-gray-50 bg-transparent text-sm px-4 py-2"
-                >
-                  Write a review
-                </Button>
               </div>
 
               <div className="space-y-6 sm:space-y-8">
@@ -1089,14 +1093,7 @@ export default function FiftyShadesProductPage() {
                 ))}
               </div>
 
-              <div className="text-center mt-8 sm:mt-12">
-                <Button
-                  variant="outline"
-                  className="border-gray-900/20 text-gray-900 hover:bg-gray-50 px-6 sm:px-8 bg-transparent text-sm sm:text-base"
-                >
-                  Load More Reviews
-                </Button>
-              </div>
+              <div className="text-center mt-8 sm:mt-12"></div>
             </div>
           </div>
         </div>
@@ -1118,25 +1115,56 @@ export default function FiftyShadesProductPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 sm:py-16 pb-20 sm:pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="sm:col-span-2">
-              <h3 className="text-xl sm:text-2xl font-serif font-light mb-4 tracking-wide">Royal Caress</h3>
-              <p className="text-white/70 leading-relaxed font-light max-w-md text-sm sm:text-base">
+      <footer className="py-16 px-6 lg:px-12 bg-[#0B0B0B] text-white pb-20 sm:pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl font-serif font-light mb-4 tracking-wide">Royal Caress</h3>
+              <p className="text-white/70 leading-relaxed font-light max-w-md">
                 A sanctuary for intimate wellness, celebrating every body and every expression of pleasure.
               </p>
             </div>
 
-            {/* Navigate section removed */}
-
             <div>
-              <h4 className="font-medium mb-4 tracking-wide text-sm sm:text-base">Connect</h4>
+              <h4 className="font-medium mb-4 tracking-wide">Connect</h4>
               <p className="text-white/70 mb-4 text-sm">support@royalcaress.co.uk</p>
+              <div className="flex gap-4 mb-4">
+                <Link
+                  href="https://www.instagram.com/royal.caress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://wa.me/447592253773?text=Hello%21%20Hope%20you%27re%20well.%20I%27d%20love%20to%20speak%20when%20you%20have%20a%20moment.%20Many%20thanks%21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@royal.caress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.43z" />
+                  </svg>
+                </Link>
+              </div>
+              <CookieSettingsButton />
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 mt-8 sm:mt-12 text-center text-white/60 text-xs sm:text-sm font-light">
+          <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm font-light">
             <p>© 2025 Royal Caress Ltd — All rights reserved</p>
           </div>
         </div>

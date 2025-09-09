@@ -219,10 +219,10 @@ export default function RoyalCaressLanding() {
       } else {
         clearInterval(typewriterTimer)
       }
-    }, 80)
+    }, 50) // Changed from 80 to 50
 
     // Whisper animation timers - start after typewriter finishes
-    const titleDuration = fullTitle.length * 80 + 500
+    const titleDuration = fullTitle.length * 50 + 500
     const whisperTimers = [
       setTimeout(() => setWhisperStep(1), titleDuration + 500),
       setTimeout(() => setWhisperStep(2), titleDuration + 2000),
@@ -388,6 +388,12 @@ export default function RoyalCaressLanding() {
               <Button
                 size="lg"
                 className="bg-[#B3123D] text-[#F5E1DA] hover:bg-[#B3123D]/90 px-8 lg:px-10 py-4 lg:py-6 text-base lg:text-lg font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full"
+                onClick={() => {
+                  const element = document.querySelector('[data-section="designed-for-pleasure"]')
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
               >
                 Begin Your Journey
               </Button>
@@ -412,7 +418,10 @@ export default function RoyalCaressLanding() {
       </section>
 
       {/* 2. Designed for Pleasure — The Intention */}
-      <section className="py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-b from-[#4B1D3F] to-[#B3123D]/80">
+      <section
+        data-section="designed-for-pleasure"
+        className="py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-b from-[#4B1D3F] to-[#B3123D]/80"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="mb-16 lg:mb-20">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-serif font-light text-[#F5E1DA] mb-8 tracking-tight">
@@ -747,6 +756,20 @@ export default function RoyalCaressLanding() {
                   className="transition-all duration-300 hover:scale-110"
                 >
                   <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@royal.caress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.43z" />
+                  </svg>
                 </Link>
               </div>
               <CookieSettingsButton />

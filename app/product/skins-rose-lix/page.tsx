@@ -3,10 +3,32 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Package, Truck, Star, ThumbsUp, ThumbsDown, Flag, Menu, X } from "lucide-react"
+import {
+  Heart,
+  Shield,
+  Package,
+  Truck,
+  Star,
+  ThumbsUp,
+  ThumbsDown,
+  Flag,
+  Menu,
+  X,
+  Instagram,
+  MessageCircle,
+} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import dynamic from "next/dynamic"
+
+const CookieSettingsButton = dynamic(
+  () => import("@/components/cookie-settings-button").then((mod) => ({ default: mod.CookieSettingsButton })),
+  {
+    ssr: false,
+    loading: () => <div className="w-24 h-8"></div>,
+  },
+)
 
 export default function SkinsRoseLixProductPage() {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -142,11 +164,7 @@ export default function SkinsRoseLixProductPage() {
   return (
     <div className="min-h-screen bg-rose-50">
       {/* Floating Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-rose-900/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-        }`}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-rose-900 shadow-lg md:bg-rose-900/95 md:backdrop-blur-md transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
@@ -317,12 +335,6 @@ export default function SkinsRoseLixProductPage() {
       {/* Features Section */}
       <section id="features" className="py-16 sm:py-20 lg:py-24 bg-rose-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-sm sm:text-base font-medium tracking-[0.2em] text-rose-900/80 uppercase mb-8">
-              PREMIUM FEATURES
-            </h2>
-          </div>
-
           {/* Mobile Layout - Vertical Stack */}
           <div className="block md:hidden space-y-8">
             <div className="text-center p-6">
@@ -798,7 +810,12 @@ export default function SkinsRoseLixProductPage() {
                 </p>
               </div>
 
-              <div className="text-2xl sm:text-3xl font-serif font-light text-rose-900 mb-6 sm:mb-8">€45.99</div>
+              <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                <div className="text-2xl sm:text-3xl font-serif font-light text-rose-900">€45.99</div>
+                <Badge variant="outline" className="border-rose-700 text-rose-800 bg-rose-100 text-xs font-medium">
+                  Shipping not included.
+                </Badge>
+              </div>
 
               {/* Buy Now Button */}
               <div className="mb-6 sm:mb-8">
@@ -952,23 +969,56 @@ export default function SkinsRoseLixProductPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-rose-900 text-white py-12 sm:py-16 pb-20 sm:pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="sm:col-span-2">
-              <h3 className="text-xl sm:text-2xl font-serif font-light mb-4 tracking-wide text-white">Royal Caress</h3>
-              <p className="text-white/70 leading-relaxed font-light max-w-md text-sm sm:text-base">
+      <footer className="py-16 px-6 lg:px-12 bg-[#0B0B0B] text-white pb-20 sm:pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl font-serif font-light mb-4 tracking-wide">Royal Caress</h3>
+              <p className="text-white/70 leading-relaxed font-light max-w-md">
                 A sanctuary for intimate wellness, celebrating every body and every expression of pleasure.
               </p>
             </div>
 
             <div>
-              <h4 className="font-medium mb-4 tracking-wide text-sm sm:text-base text-white">Connect</h4>
+              <h4 className="font-medium mb-4 tracking-wide">Connect</h4>
               <p className="text-white/70 mb-4 text-sm">support@royalcaress.co.uk</p>
+              <div className="flex gap-4 mb-4">
+                <Link
+                  href="https://www.instagram.com/royal.caress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://wa.me/447592253773?text=Hello%21%20Hope%20you%27re%20well.%20I%27d%20love%20to%20speak%20when%20you%20have%20a%20moment.%20Many%20thanks%21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@royal.caress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.43z" />
+                  </svg>
+                </Link>
+              </div>
+              <CookieSettingsButton />
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 mt-8 sm:mt-12 text-center text-white/60 text-xs sm:text-sm font-light">
+          <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm font-light">
             <p>© 2025 Royal Caress Ltd — All rights reserved</p>
           </div>
         </div>
