@@ -115,7 +115,7 @@ const FeatureSection = React.memo(
                   alt={alt}
                   width={800}
                   height={400}
-                  className="w-full h-auto object-cover object-center transition-all duration-700 hover:scale-105"
+                  className="w-full h-auto object-cover object-center transition-all duration-700 hover:scale-105 rotate-90 lg:rotate-0"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
@@ -434,7 +434,7 @@ export default function RoyalCaressLanding() {
             <div className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20">
                 <Image
-                  src="/images/red-rose-product.jpg"
+                  src="/images/red-rose-product-new.jpg"
                   alt="Body-Safe Materials"
                   width={640}
                   height={480}
@@ -517,7 +517,7 @@ export default function RoyalCaressLanding() {
             <div className="group cursor-pointer h-full">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
                 <Image
-                  src="/images/red-rose-product.jpg"
+                  src="/images/red-rose-product-new.jpg"
                   alt="Body-Safe Materials"
                   width={640}
                   height={480}
@@ -702,7 +702,7 @@ export default function RoyalCaressLanding() {
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-serif font-light mb-6 tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-serif font-light mb-6 tracking-tight text-white">
             Want More Than Just a Product?
           </h2>
           <p className="text-xl lg:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">

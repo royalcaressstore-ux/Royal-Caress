@@ -58,19 +58,22 @@ export default function SatisfyerLoveTriangleProductPage() {
   ]
 
   const specifications = [
-    { label: "Product Name", value: "Satisfyer App Enabled Love Triangle - White" },
-    { label: "Category", value: "App-controlled couples vibrator" },
-    { label: "Technology", value: "Bluetooth connectivity with app control" },
-    { label: "Materials", value: "Body-safe silicone with ABS plastic" },
-    { label: "Dimensions", value: "11.5 cm x 8.2 cm x 3.5 cm" },
-    { label: "Weight", value: "165 grams" },
-    { label: "Colour", value: "Pure white with silver accents" },
-    { label: "Battery", value: "Rechargeable lithium-ion via USB" },
-    { label: "Runtime", value: "60 minutes continuous use" },
-    { label: "Charging Time", value: "90 minutes for full charge" },
-    { label: "Vibration Modes", value: "Unlimited via app + 12 preset patterns" },
-    { label: "Water Resistance", value: "IPX7 waterproof" },
-    { label: "Connectivity", value: "Bluetooth 4.0 up to 10m range" },
+    { label: "Product Name", value: "Satisfyer Love Triangle Connect - Air-Pulse + Vibration" },
+    { label: "Category", value: "App-controlled couples vibrator with Air-Pulse technology" },
+    { label: "Materials", value: "Body-friendly silicone and ABS plastic" },
+    { label: "App Compatibility", value: "Free Satisfyer Connect app (iOS & Android)" },
+    { label: "Dimensions (L x W x H)", value: "67.5 mm x 87.55 mm x 31.8 mm" },
+    { label: "Dimensions (Imperial)", value: '2.65" x 3.4" x 1.25"' },
+    { label: "Weight", value: "115.5 grams (4.1 oz)" },
+    { label: "Technology", value: "Air-Pulse pressure waves + vibration (2 super-strong motors)" },
+    { label: "Pressure Wave Intensities", value: "11 intensity levels" },
+    { label: "Vibration Settings", value: "10 vibration configurations" },
+    { label: "Special Features", value: "Whisper mode, infinite app programs" },
+    { label: "Battery Type", value: "Rechargeable lithium-ion battery" },
+    { label: "Charging", value: "Magnetic USB charging cable included" },
+    { label: "Water Resistance", value: "IPX7 waterproof - safe for water use" },
+    { label: "Warranty", value: "15-year warranty coverage" },
+    { label: "Usage", value: "Can be used with or without the app" },
   ]
 
   const reviews = [
@@ -147,7 +150,7 @@ export default function SatisfyerLoveTriangleProductPage() {
       helpful: 36,
       notHelpful: 0,
       verified: true,
-      customerSince: "Customer since 2023",
+      customerSince: "Customers since 2023",
     },
   ]
 
@@ -301,11 +304,11 @@ export default function SatisfyerLoveTriangleProductPage() {
             </h2>
 
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-light text-white/90">
-              Experience the future of intimate pleasure with the Satisfyer Love Triangle. Couples can experience
-              unparalleled experiences with this revolutionary app-enabled device, which combines cutting-edge Bluetooth
-              technology with an innovative triangular design. Control vibrations remotely, create custom patterns, sync
-              to music, and explore unlimited possibilities through the intuitive Satisfyer Connect app. Perfect for
-              both intimate moments together and exciting long-distance play.
+              Experience the future of intimate pleasure with the Satisfyer Love Triangle Connect. Our Love Triangle
+              combines proven Air-Pulse technology with deep vibrations and a soft silicone head. Its practical cover
+              ensures hygienic and discreet storage at all times, even when on the move. Control vibrations remotely,
+              create custom patterns, sync to music, and explore unlimited possibilities through the free Satisfyer
+              Connect app available for iOS and Android.
             </p>
           </div>
         </div>
@@ -434,7 +437,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
                 Innovative shape for enhanced
                 <br />
-                stimulation and comfortable wear
+                stimulation and comfortable use
               </p>
             </div>
 
@@ -524,7 +527,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               <p className="text-white/70 text-sm leading-relaxed">
                 Innovative shape for enhanced
                 <br />
-                stimulation and comfortable wear
+                stimulation and comfortable use
               </p>
             </div>
 
@@ -646,7 +649,7 @@ export default function SatisfyerLoveTriangleProductPage() {
                 {expandedSection === "content" && (
                   <div className="py-4 sm:py-6">
                     <ul className="space-y-2 sm:space-y-3 text-white/80 text-sm sm:text-base">
-                      <li>• Satisfyer App Enabled Love Triangle - White</li>
+                      <li>• Satisfyer Love Triangle Connect - App Enabled</li>
                       <li>• USB charging cable</li>
                       <li>• Quick start guide</li>
                       <li>• Satisfyer Connect app download instructions</li>
@@ -674,13 +677,14 @@ export default function SatisfyerLoveTriangleProductPage() {
                 {expandedSection === "app-features" && (
                   <div className="py-4 sm:py-6">
                     <ul className="space-y-2 sm:space-y-3 text-white/80 text-sm sm:text-base">
+                      <li>• Free Satisfyer Connect app for iOS and Android</li>
+                      <li>• Infinite range of customizable programs</li>
                       <li>• Remote control from anywhere in the world</li>
-                      <li>• Create and save custom vibration patterns</li>
                       <li>• Music synchronization feature</li>
+                      <li>• Whisper mode for discreet operation</li>
                       <li>• Video chat integration for long-distance couples</li>
                       <li>• Partner control and sharing features</li>
-                      <li>• Ambient sound reactive modes</li>
-                      <li>• Scheduled sessions and alarms</li>
+                      <li>• Can be used with or without the app</li>
                     </ul>
                   </div>
                 )}
@@ -703,8 +707,9 @@ export default function SatisfyerLoveTriangleProductPage() {
                 {expandedSection === "warranty" && (
                   <div className="py-4 sm:py-6 text-white/80 text-sm sm:text-base">
                     <p className="mb-4">
-                      Royal Caress stands behind the quality of every product. Your Satisfyer App Enabled Love Triangle
-                      comes with a comprehensive 2-year warranty covering manufacturing defects and app support.
+                      Royal Caress stands behind the quality of every product. Your Satisfyer Love Triangle Connect
+                      comes with an exceptional 15-year warranty covering manufacturing defects and app support - one of
+                      the longest warranties in the industry.
                     </p>
                     <p>
                       Our discreet customer service team is available to assist with any questions or concerns about
@@ -831,7 +836,7 @@ export default function SatisfyerLoveTriangleProductPage() {
             <div className="order-2 lg:order-2">
               <div className="flex items-start justify-between mb-4">
                 <h1 className="text-2xl sm:text-3xl font-serif font-light text-[#E1B88B] tracking-tight flex-1 pr-4">
-                  SATISFYER APP ENABLED LOVE TRIANGLE
+                  SATISFYER LOVE TRIANGLE CONNECT - AIR-PULSE + VIBRATION
                 </h1>
                 <button className="p-2 rounded-full hover:bg-[#D4A574] transition-colors">
                   <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-[#E1B88B]/50" />
@@ -861,10 +866,11 @@ export default function SatisfyerLoveTriangleProductPage() {
               {/* Product Description */}
               <div className="mb-6 sm:mb-8">
                 <p className="text-[#E1B88B]/80 leading-relaxed text-sm sm:text-base">
-                  The Satisfyer App Enabled Love Triangle revolutionizes couples' intimacy with cutting-edge app control
-                  technology. The innovative triangular design provides enhanced stimulation while Bluetooth
-                  connectivity offers unlimited customization through the Satisfyer Connect app. Perfect for both
-                  intimate moments together and exciting long-distance play.
+                  The Satisfyer Love Triangle Connect revolutionizes couples' intimacy with proven Air-Pulse technology
+                  combined with deep vibrations. The innovative triangular design with soft silicone head provides
+                  enhanced clitoral stimulation using pressure waves and vibrations simultaneously. The free Satisfyer
+                  Connect app offers infinite customization programs, while the practical cover ensures hygienic
+                  storage. Perfect for both intimate moments together and exciting long-distance play.
                 </p>
               </div>
 
@@ -991,7 +997,7 @@ export default function SatisfyerLoveTriangleProductPage() {
         <div className="flex items-center space-x-4 w-full max-w-full">
           <div className="flex-1">
             <div className="text-lg font-serif font-light text-[#E1B88B]">€52.99</div>
-            <div className="text-xs text-[#E1B88B]/70">SATISFYER LOVE TRIANGLE</div>
+            <div className="text-xs text-[#E1B88B]/70">SATISFYER LOVE TRIANGLE CONNECT</div>
           </div>
           <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
             <Button className="bg-[#E1B88B] text-white hover:bg-[#D4A574] px-8 py-3 rounded-full font-medium">
