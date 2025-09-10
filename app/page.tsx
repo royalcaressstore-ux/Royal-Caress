@@ -115,7 +115,7 @@ const FeatureSection = React.memo(
                   alt={alt}
                   width={800}
                   height={400}
-                  className="w-full h-auto object-cover object-center transition-all duration-700 hover:scale-105 rotate-90 lg:rotate-0"
+                  className="w-full h-auto object-cover object-center transition-all duration-700 hover:scale-105"
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
