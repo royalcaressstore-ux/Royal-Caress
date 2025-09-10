@@ -225,7 +225,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               <div className="hidden sm:flex items-center space-x-3">
                 <div className="w-4 h-4 rounded-full bg-white border-2 border-white/30"></div>
                 <span className="text-xs font-medium text-white">PURE WHITE</span>
-                <span className="text-sm font-medium text-white">€52.99</span>
+                <span className="text-sm font-medium text-white">€60.88</span>
               </div>
 
               <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
@@ -272,7 +272,7 @@ export default function SatisfyerLoveTriangleProductPage() {
                 <div className="flex items-center space-x-3 pt-2 border-t border-white/20">
                   <div className="w-4 h-4 rounded-full bg-white border-2 border-white/30"></div>
                   <span className="text-xs font-medium text-white">PURE WHITE</span>
-                  <span className="text-sm font-medium text-white">€52.99</span>
+                  <span className="text-sm font-medium text-white">€60.88</span>
                 </div>
               </div>
             </div>
@@ -454,7 +454,7 @@ export default function SatisfyerLoveTriangleProductPage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1.5}
-                      d="M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
+                      d="M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
                     />
                   </svg>
                 </div>
@@ -848,7 +848,7 @@ export default function SatisfyerLoveTriangleProductPage() {
               </p>
 
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
-                <div className="text-2xl sm:text-3xl font-serif font-light text-[#E1B88B]">€52.99</div>
+                <div className="text-2xl sm:text-3xl font-serif font-light text-[#E1B88B]">€60.88</div>
                 <Badge variant="outline" className="border-amber-600 text-amber-700 bg-amber-100 text-xs font-medium">
                   Shipping not included.
                 </Badge>
@@ -996,7 +996,7 @@ export default function SatisfyerLoveTriangleProductPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E1B88B]/10 p-4 z-40 sm:hidden w-full max-w-full">
         <div className="flex items-center space-x-4 w-full max-w-full">
           <div className="flex-1">
-            <div className="text-lg font-serif font-light text-[#E1B88B]">€52.99</div>
+            <div className="text-lg font-serif font-light text-[#E1B88B]">€60.88</div>
             <div className="text-xs text-[#E1B88B]/70">SATISFYER LOVE TRIANGLE CONNECT</div>
           </div>
           <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">

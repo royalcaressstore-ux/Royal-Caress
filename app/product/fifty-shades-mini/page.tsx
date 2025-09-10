@@ -222,7 +222,7 @@ export default function FiftyShadesProductPage() {
               <div className="hidden sm:flex items-center space-x-3">
                 <div className="w-4 h-4 rounded-full bg-gray-700 border-2 border-gray-400"></div>
                 <span className="text-xs font-medium text-white">DEEP GREY</span>
-                <span className="text-sm font-medium text-white">€39.98</span>
+                <span className="text-sm font-medium text-white">€45.93</span>
               </div>
 
               <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
@@ -269,7 +269,7 @@ export default function FiftyShadesProductPage() {
                 <div className="flex items-center space-x-3 pt-2 border-t border-white/20">
                   <div className="w-4 h-4 rounded-full bg-gray-700 border-2 border-gray-400"></div>
                   <span className="text-xs font-medium text-white">DEEP GREY</span>
-                  <span className="text-sm font-medium text-white">€39.98</span>
+                  <span className="text-sm font-medium text-white">€45.93</span>
                 </div>
               </div>
             </div>
@@ -899,7 +899,7 @@ export default function FiftyShadesProductPage() {
               </div>
 
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
-                <div className="text-2xl sm:text-3xl font-serif font-light text-gray-900">€39.98</div>
+                <div className="text-2xl sm:text-3xl font-serif font-light text-gray-900">€45.93</div>
                 <Badge variant="outline" className="border-gray-700 text-gray-800 bg-gray-100 text-xs font-medium">
                   Shipping not included.
                 </Badge>
@@ -1113,7 +1113,7 @@ export default function FiftyShadesProductPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-900/10 p-4 z-40 sm:hidden">
         <div className="flex items-center space-x-4">
           <div className="flex-1">
-            <div className="text-lg font-serif font-light text-gray-900">€39.98</div>
+            <div className="text-lg font-serif font-light text-gray-900">€45.93</div>
             <div className="text-xs text-gray-900/70">FIFTY SHADES SENSATION MINI WAND</div>
           </div>
           <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">

@@ -218,7 +218,7 @@ export default function SkinsRoseLixProductPage() {
               <div className="hidden sm:flex items-center space-x-3">
                 <div className="w-4 h-4 rounded-full bg-rose-400 border-2 border-rose-300"></div>
                 <span className="text-xs font-medium text-white">ROSE PINK</span>
-                <span className="text-sm font-medium text-white">€45.99</span>
+                <span className="text-sm font-medium text-white">€35.98</span>
               </div>
 
               <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
@@ -265,7 +265,7 @@ export default function SkinsRoseLixProductPage() {
                 <div className="flex items-center space-x-3 pt-2 border-t border-rose-900/20">
                   <div className="w-4 h-4 rounded-full bg-rose-400 border-2 border-rose-300"></div>
                   <span className="text-xs font-medium text-white">ROSE PINK</span>
-                  <span className="text-sm font-medium text-white">€45.99</span>
+                  <span className="text-sm font-medium text-white">€35.98</span>
                 </div>
               </div>
             </div>
@@ -817,7 +817,7 @@ export default function SkinsRoseLixProductPage() {
               </div>
 
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
-                <div className="text-2xl sm:text-3xl font-serif font-light text-rose-900">€45.99</div>
+                <div className="text-2xl sm:text-3xl font-serif font-light text-rose-900">€35.98</div>
                 <Badge variant="outline" className="border-rose-700 text-rose-800 bg-rose-100 text-xs font-medium">
                   Shipping not included.
                 </Badge>
@@ -963,7 +963,7 @@ export default function SkinsRoseLixProductPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-rose-900/10 p-4 z-40 sm:hidden">
         <div className="flex items-center space-x-4">
           <div className="flex-1">
-            <div className="text-lg font-serif font-light text-rose-900">€45.99</div>
+            <div className="text-lg font-serif font-light text-rose-900">€35.98</div>
             <div className="text-xs text-rose-900/70">SKINS ROSE BUDDIES - THE ROSE LIX</div>
           </div>
           <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
