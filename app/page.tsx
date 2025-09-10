@@ -89,6 +89,7 @@ const FeatureSection = React.memo(
     buttonText = "Explore",
     bgColor = "bg-[#4B1D3F]",
     textColor = "text-white",
+    buttonTextColor = "text-[#4B1D3F]",
   }: {
     image: string
     alt: string
@@ -98,6 +99,7 @@ const FeatureSection = React.memo(
     buttonText?: string
     bgColor?: string
     textColor?: string
+    buttonTextColor?: string
   }) => (
     <section className={`py-24 lg:py-32 px-6 lg:px-12 ${bgColor}`}>
       <div className="max-w-7xl mx-auto">
@@ -131,7 +133,7 @@ const FeatureSection = React.memo(
               <Link href={href}>
                 <Button
                   size="default"
-                  className="bg-white text-[#B3123D] hover:bg-white/90 px-8 py-3 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full"
+                  className={`bg-white ${buttonTextColor} hover:bg-white/90 px-8 py-3 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full`}
                 >
                   {buttonText}
                 </Button>
@@ -148,7 +150,7 @@ const FeatureSection = React.memo(
             <Link href={href}>
               <Button
                 size="default"
-                className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-3 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full"
+                className={`bg-white ${buttonTextColor} hover:bg-white/90 px-8 py-3 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 rounded-full`}
               >
                 {buttonText}
               </Button>
@@ -744,6 +746,7 @@ export default function RoyalCaressLanding() {
         href="/product/satisfyer-love-triangle"
         bgColor="bg-gray-200"
         textColor="text-gray-800"
+        buttonTextColor="text-[#D4A5C7]"
       />
 
       {/* 9. Newsletter — The Next Chapter */}

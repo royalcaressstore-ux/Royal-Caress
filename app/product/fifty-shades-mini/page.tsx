@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import {
   Heart,
@@ -12,7 +11,6 @@ import {
   Star,
   ChevronDown,
   ChevronUp,
-  Search,
   ThumbsUp,
   ThumbsDown,
   Flag,
@@ -621,10 +619,8 @@ export default function FiftyShadesProductPage() {
                   <ul className="space-y-2 sm:space-y-3 text-gray-900/80 text-sm sm:text-base">
                     <li>• Fifty Shades of Grey Sensation Mini Wand</li>
                     <li>• USB charging cable</li>
-                    <li>• Premium instruction manual</li>
                     <li>• Luxury storage case</li>
                     <li>• Numbered authenticity certificate</li>
-                    <li>• "Moments Fifty Shades" guide</li>
                   </ul>
                 </div>
               )}
@@ -984,18 +980,6 @@ export default function FiftyShadesProductPage() {
             <p className="text-gray-900/70 mb-8 text-sm sm:text-base">
               142 out of 156 (91%) reviewers recommend this product
             </p>
-
-            {/* Search Reviews */}
-            <div className="max-w-md mx-auto mb-8">
-              <div className="relative">
-                <Input
-                  type="text"
-                  placeholder="Search topics and reviews"
-                  className="pl-12 pr-4 py-3 rounded-full border-gray-900/20 focus:border-gray-900 bg-white text-sm"
-                />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-900/50" />
-              </div>
-            </div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -1181,4 +1165,3 @@ export default function FiftyShadesProductPage() {
       </footer>
     </div>
   )
-}
