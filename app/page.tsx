@@ -434,7 +434,7 @@ export default function RoyalCaressLanding() {
             <div className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20">
                 <Image
-                  src="/images/red-rose-product-new.jpg"
+                  src="/images/red-rose-body-safe.jpg"
                   alt="Body-Safe Materials"
                   width={640}
                   height={480}
@@ -517,7 +517,7 @@ export default function RoyalCaressLanding() {
             <div className="group cursor-pointer h-full">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F5E1DA] to-[#B3123D]/20 h-full">
                 <Image
-                  src="/images/red-rose-product-new.jpg"
+                  src="/images/red-rose-body-safe.jpg"
                   alt="Body-Safe Materials"
                   width={640}
                   height={480}

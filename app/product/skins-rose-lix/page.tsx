@@ -221,7 +221,7 @@ export default function SkinsRoseLixProductPage() {
                 <span className="text-sm font-medium text-white">€35.98</span>
               </div>
 
-              <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
+              <Link href="https://buy.stripe.com/bJe3cu8XG0PmaJU2Mi6AM08" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-white text-rose-900 hover:bg-gray-100 px-3 py-1.5 rounded-full font-medium text-xs">
                   BUY NOW
                 </Button>
@@ -825,7 +825,7 @@ export default function SkinsRoseLixProductPage() {
 
               {/* Buy Now Button */}
               <div className="mb-6 sm:mb-8">
-                <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
+                <Link href="https://buy.stripe.com/bJe3cu8XG0PmaJU2Mi6AM08" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-rose-900 text-white hover:bg-rose-800 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-lg">
                     BUY NOW
                   </Button>
@@ -966,7 +966,7 @@ export default function SkinsRoseLixProductPage() {
             <div className="text-lg font-serif font-light text-rose-900">€35.98</div>
             <div className="text-xs text-rose-900/70">SKINS ROSE BUDDIES - THE ROSE LIX</div>
           </div>
-          <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
+          <Link href="https://buy.stripe.com/bJe3cu8XG0PmaJU2Mi6AM08" target="_blank" rel="noopener noreferrer">
             <Button className="bg-rose-900 text-white hover:bg-rose-800 px-8 py-3 rounded-full font-medium">
               BUY NOW
             </Button>

@@ -228,7 +228,7 @@ export default function SatisfyerLoveTriangleProductPage() {
                 <span className="text-sm font-medium text-white">€60.88</span>
               </div>
 
-              <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
+              <Link href="https://buy.stripe.com/bJe28qa1K1TqcS286C6AM0a" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-white text-[#E1B88B] hover:bg-white/90 px-2 sm:px-3 py-1.5 rounded-full font-medium text-xs whitespace-nowrap">
                   BUY NOW
                 </Button>
@@ -856,7 +856,7 @@ export default function SatisfyerLoveTriangleProductPage() {
 
               {/* Buy Now Button */}
               <div className="mb-6 sm:mb-8">
-                <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
+                <Link href="https://buy.stripe.com/bJe28qa1K1TqcS286C6AM0a" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-[#E1B88B] text-white hover:bg-[#D4A574] py-3 rounded-full font-medium text-sm sm:text-lg">
                     BUY NOW
                   </Button>
@@ -999,7 +999,7 @@ export default function SatisfyerLoveTriangleProductPage() {
             <div className="text-lg font-serif font-light text-[#E1B88B]">€60.88</div>
             <div className="text-xs text-[#E1B88B]/70">SATISFYER LOVE TRIANGLE CONNECT</div>
           </div>
-          <Link href="https://buy.stripe.com/5kQ4gyc9S9lSdW672y6AM07" target="_blank" rel="noopener noreferrer">
+          <Link href="https://buy.stripe.com/bJe28qa1K1TqcS286C6AM0a" target="_blank" rel="noopener noreferrer">
             <Button className="bg-[#E1B88B] text-white hover:bg-[#D4A574] px-8 py-3 rounded-full font-medium">
               BUY NOW
             </Button>
