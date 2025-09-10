@@ -609,15 +609,67 @@ export default function RoyalCaressLanding() {
         </div>
       </section>
 
-      {/* 3. Hero Video — The Experience */}
-      <section className="relative py-0 px-0 bg-[#ebadbde] overflow-hidden">
+      {/* Video Experience Section */}
+      <section className="relative py-0 px-0 bg-gray-100 overflow-hidden">
         <div className="relative w-full h-[70vh]">
-          <DynamicVideo
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4948-tdrdBtjBfQRCSiZmXBBSMGIusimkRq.mp4"
-            className="w-full h-full"
-            onPlay={handleVideoPlay}
-            onPause={handleVideoPause}
-          />
+          <video
+            className="w-full h-full object-cover"
+            muted
+            loop
+            playsInline
+            ref={(video) => {
+              if (video) {
+                video.onclick = () => {
+                  if (video.paused) {
+                    video.play()
+                    setIsVideoPlaying(true)
+                  } else {
+                    video.pause()
+                    setIsVideoPlaying(false)
+                  }
+                }
+              }
+            }}
+          >
+            <source
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4948-tdrdBtjBfQRCSiZmXBBSMGIusimkRq.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Text Overlay - Only shows when video is not playing */}
+          <div
+            className={`absolute inset-0 flex flex-col items-center justify-center bg-black/20 transition-opacity duration-500 ${
+              isVideoPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+          >
+            {/* Text Overlay */}
+            <div className="text-center mb-8">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light text-white tracking-tight px-4">
+                Because intimacy deserves the <span className="font-bold">finest care.</span>
+              </p>
+            </div>
+
+            {/* Play Button */}
+            <div
+              className="cursor-pointer"
+              onClick={(e) => {
+                e.stopPropagation()
+                const video = e.currentTarget.parentElement?.parentElement?.querySelector("video")
+                if (video) {
+                  video.play()
+                  setIsVideoPlaying(true)
+                }
+              }}
+            >
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center hover:bg-white/90 transition-all duration-300 hover:scale-110">
+                <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
