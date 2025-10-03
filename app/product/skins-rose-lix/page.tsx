@@ -57,7 +57,7 @@ export default function SkinsRoseLixProductPage() {
   const specifications = [
     { label: "Product Name", value: "Skins Rose Buddies - The Rose Lix" },
     { label: "Category", value: "Premium oral stimulation device" },
-    { label: "Technology", value: "Rotating tongue with suction technology" },
+    { label: "Technology", value: "Rotating tongue with pressure wave technology" },
     { label: "Materials", value: "Body-safe silicone with rose-inspired design" },
     { label: "Dimensions", value: "8.5 cm x 7.2 cm x 6.8 cm" },
     { label: "Weight", value: "145 grams" },
@@ -65,7 +65,7 @@ export default function SkinsRoseLixProductPage() {
     { label: "Battery", value: "Rechargeable lithium-ion via USB" },
     { label: "Runtime", value: "90 minutes continuous use" },
     { label: "Charging Time", value: "120 minutes for full charge" },
-    { label: "Stimulation Modes", value: "10 modes (7 suction + 3 tongue patterns)" },
+    { label: "Stimulation Modes", value: "10 modes (pressure wave + tongue patterns)" },
     { label: "Water Resistance", value: "IPX7 waterproof" },
     { label: "Noise Level", value: "Less than 45 dB whisper-quiet operation" },
   ]
@@ -80,7 +80,7 @@ export default function SkinsRoseLixProductPage() {
       date: "1 week ago",
       title: "Revolutionary Design - Game Changer!",
       content:
-        "The Rose Lix is absolutely incredible! The rotating tongue feature is unlike anything I've experienced before. The suction combined with the tongue movement creates sensations that are simply divine. The rose design is beautiful and discreet - it looks like a decorative piece on my nightstand. The whisper-quiet operation means complete privacy, and the battery life is excellent. This has completely changed my self-care routine.",
+        "The Rose Lix is absolutely incredible! The rotating tongue feature is unlike anything I've experienced before. The pressure wave combined with the tongue movement creates sensations that are simply divine. The rose design is beautiful and discreet - it looks like a decorative piece on my nightstand. The whisper-quiet operation means complete privacy, and the battery life is excellent. This has completely changed my self-care routine.",
       helpful: 32,
       notHelpful: 0,
       verified: true,
@@ -95,7 +95,7 @@ export default function SkinsRoseLixProductPage() {
       date: "2 weeks ago",
       title: "Beautiful and Effective",
       content:
-        "I was initially drawn to the aesthetic - it's genuinely beautiful and doesn't look like a typical adult product. But the performance is what really impressed me. The tongue rotation is so realistic and the suction levels are perfect. I love that it's waterproof so I can use it in the bath. The charging is quick and the battery lasts for multiple sessions. Highly recommend for anyone looking for something special.",
+        "I was initially drawn to the aesthetic - it's genuinely beautiful and doesn't look like a typical adult product. But the performance is what really impressed me. The tongue rotation is so realistic and the pressure wave levels are perfect. I love that it's waterproof so I can use it in the bath. The charging is quick and the battery lasts for multiple sessions. Highly recommend for anyone looking for something special.",
       helpful: 28,
       notHelpful: 1,
       verified: true,
@@ -110,7 +110,7 @@ export default function SkinsRoseLixProductPage() {
       date: "3 weeks ago",
       title: "Exceeded All Expectations",
       content:
-        "As someone who's tried many products, the Rose Lix stands out completely. The combination of suction and tongue movement is incredibly realistic and effective. The rose design is genius - it's beautiful enough to display and nobody would guess what it is. The different modes offer great variety, and the whisper-quiet operation is perfect for shared living spaces. Worth every penny.",
+        "As someone who's tried many products, the Rose Lix stands out completely. The combination of pressure waves and tongue movement is incredibly realistic and effective. The rose design is genius - it's beautiful enough to display and nobody would guess what it is. The different modes offer great variety, and the whisper-quiet operation is perfect for shared living spaces. Worth every penny.",
       helpful: 25,
       notHelpful: 0,
       verified: true,
@@ -125,7 +125,7 @@ export default function SkinsRoseLixProductPage() {
       date: "1 month ago",
       title: "Great Product with Minor Considerations",
       content:
-        "The Rose Lix is fantastic overall. The tongue feature is amazing and the suction is powerful yet gentle. The design is absolutely beautiful and very discreet. My only minor complaint is that I wish the battery lasted a bit longer, but it charges quickly so it's not a major issue. The different modes provide good variety and the whisper-quiet operation is excellent. Would definitely recommend.",
+        "The Rose Lix is fantastic overall. The tongue feature is amazing and the pressure waves are powerful yet gentle. The design is absolutely beautiful and very discreet. My only minor complaint is that I wish the battery lasted a bit longer, but it charges quickly so it's not a major issue. The different modes provide good variety and the whisper-quiet operation is excellent. Would definitely recommend.",
       helpful: 19,
       notHelpful: 2,
       verified: true,
@@ -140,7 +140,7 @@ export default function SkinsRoseLixProductPage() {
       date: "5 weeks ago",
       title: "Perfect Combination of Beauty and Function",
       content:
-        "I love everything about the Rose Lix! The rotating tongue is incredibly realistic and the suction is perfectly calibrated. The rose design is stunning - it's like having a beautiful piece of art that happens to be incredibly functional. The waterproof feature is great for bath time relaxation. The quiet operation means I can use it anytime without worry. This is definitely a premium product that delivers on all fronts.",
+        "I love everything about the Rose Lix! The rotating tongue is incredibly realistic and the pressure waves are perfectly calibrated. The rose design is stunning - it's like having a beautiful piece of art that happens to be incredibly functional. The waterproof feature is great for bath time relaxation. The quiet operation means I can use it anytime without worry. This is definitely a premium product that delivers on all fronts.",
       helpful: 31,
       notHelpful: 0,
       verified: true,
@@ -297,10 +297,10 @@ export default function SkinsRoseLixProductPage() {
 
           <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-light text-white/90 px-2">
             Experience the revolutionary Rose Lix with its unique rotating tongue technology combined with powerful
-            suction. This innovative design mimics natural oral stimulation with unprecedented realism. The beautiful
-            rose aesthetic disguises advanced engineering that delivers 10 distinct modes of pleasure, from gentle
-            teasing to intense satisfaction. Whisper-quiet operation ensures complete discretion while the waterproof
-            design allows for versatile enjoyment.
+            pressure waves. This innovative design mimics natural oral stimulation with unprecedented realism. The
+            beautiful rose aesthetic disguises advanced engineering that delivers 10 distinct modes of pleasure, from
+            gentle teasing to intense satisfaction. Whisper-quiet operation ensures complete discretion while the
+            waterproof design allows for versatile enjoyment.
           </p>
         </div>
       </section>
@@ -398,10 +398,11 @@ export default function SkinsRoseLixProductPage() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SUCTION TECHNOLOGY</h3>
+              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">PRESSURE WAVE TECHNOLOGY</h3>
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
-                Powerful yet gentle suction with
-                <br />7 different intensity levels
+                Powerful yet gentle stimulation with
+                <br />
+                10 different intensity levels
               </p>
             </div>
 
@@ -484,10 +485,11 @@ export default function SkinsRoseLixProductPage() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">SUCTION TECHNOLOGY</h3>
+              <h3 className="text-white font-semibold text-lg mb-4 tracking-wide">PRESSURE WAVE TECHNOLOGY</h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                Powerful yet gentle suction with
-                <br />7 different intensity levels
+                Powerful yet gentle stimulation with
+                <br />
+                10 different intensity levels
               </p>
             </div>
 
@@ -630,8 +632,8 @@ export default function SkinsRoseLixProductPage() {
                     <div className="pb-4">
                       <ul className="space-y-2 text-sm text-rose-900/80">
                         <li>• Revolutionary rotating tongue technology</li>
-                        <li>• 7 suction intensity levels</li>
-                        <li>• 3 unique tongue rotation patterns</li>
+                        <li>• 10 levels of pressure wave intensity</li>
+                        <li>• Multiple tongue rotation patterns</li>
                         <li>• Whisper-quiet operation under 45dB</li>
                         <li>• IPX7 waterproof design</li>
                         <li>• Rose-inspired aesthetic for discretion</li>
@@ -836,7 +838,7 @@ export default function SkinsRoseLixProductPage() {
               <div className="mb-6 sm:mb-8">
                 <p className="text-rose-900/80 leading-relaxed text-sm sm:text-base">
                   The Skins Rose Buddies: The Rose Lix combines revolutionary rotating-tongue technology with powerful
-                  suction in a beautifully discreet rose design. Experience 10 unique modes of stimulation,
+                  pressure waves in a beautifully discreet rose design. Experience 10 unique modes of stimulation,
                   whisper-quiet operation, and waterproof construction for versatile pleasure.
                 </p>
               </div>

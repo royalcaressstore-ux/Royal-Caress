@@ -795,6 +795,11 @@ export default function RoyalCaressLanding() {
             <div>
               <h4 className="font-medium mb-4 tracking-wide">Connect</h4>
               <p className="text-white/70 mb-4 text-sm">support@royalcaress.co.uk</p>
+              <div className="mb-4">
+                <Link href="/terms" className="text-white/70 hover:text-white text-sm transition-colors">
+                  GENERAL TERMS AND CONDITIONS
+                </Link>
+              </div>
               <div className="flex gap-4 mb-4">
                 <Link
                   href="https://www.tiktok.com/@royal.caress"

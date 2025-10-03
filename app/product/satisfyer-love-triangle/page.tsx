@@ -40,6 +40,7 @@ export default function SatisfyerLoveTriangleProductPage() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const [selectedColor, setSelectedColor] = useState<"white" | "black">("white")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,13 +50,24 @@ export default function SatisfyerLoveTriangleProductPage() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const productImages = [
+  const whiteImages = [
     "/images/love-triangle-1.jpg",
     "/images/love-triangle-2.jpg",
     "/images/love-triangle-3.jpg",
     "/images/love-triangle-4.jpg",
     "/images/love-triangle-5.jpg",
   ]
+
+  const blackImages = [
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ef1b1b2b-63a7-4953-a7c8-350c2531c317-NgXtB8uiQ2RMSHMN3CYsClMJWp0cpD.jpeg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c30ba094-9b25-4b2d-ac01-b03343ce229e-xXXTab4HeHXriDUnSHjpPjsOazD2Tm.jpeg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4f940e60-9bf9-4265-bdaf-f0815da06453-Wkb0APdLZvB7YKiwSr9ATuKskiCK8a.jpeg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c6c3b7f2-f849-4c6f-88eb-0ba108cf96cb-ohJLKSwaik4HejGUpnjoXOe1SzE7VZ.jpeg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/84eac09e-14d0-4e49-875d-bcbb545c790a-d9hdXhRlLj6L20q8dwKIDD1E3ej4i0.jpeg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5215ce46-e9af-49ab-a0ab-05fdd09d8c05-kGKlcYYAvRFQ8Mx1SwzJT9vo2OHadt.jpeg",
+  ]
+
+  const productImages = selectedColor === "white" ? whiteImages : blackImages
 
   const specifications = [
     { label: "Product Name", value: "Satisfyer Love Triangle Connect - Air-Pulse + Vibration" },
@@ -173,7 +185,6 @@ export default function SatisfyerLoveTriangleProductPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#E1B88B] shadow-lg md:bg-[#E1B88B]/95 md:backdrop-blur-md transition-all duration-300">
         <div className="w-full max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Replace text logo with image logo */}
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/royal-caress-logo.png"
@@ -222,9 +233,12 @@ export default function SatisfyerLoveTriangleProductPage() {
 
             {/* Mobile & Desktop Right Side */}
             <div className="flex items-center space-x-2">
+              {/* Color Display */}
               <div className="hidden sm:flex items-center space-x-3">
-                <div className="w-4 h-4 rounded-full bg-white border-2 border-white/30"></div>
-                <span className="text-xs font-medium text-white">PURE WHITE</span>
+                <div
+                  className={`w-4 h-4 rounded-full ${selectedColor === "white" ? "bg-white border-2 border-black" : "bg-black border-2 border-white"}`}
+                ></div>
+                <span className="text-xs font-medium text-white">{selectedColor === "white" ? "WHITE" : "BLACK"}</span>
                 <span className="text-sm font-medium text-white">£60.88</span>
               </div>
 
@@ -269,9 +283,14 @@ export default function SatisfyerLoveTriangleProductPage() {
                 >
                   SPECIFICATIONS
                 </button>
+                {/* Color Display */}
                 <div className="flex items-center space-x-3 pt-2 border-t border-white/20">
-                  <div className="w-4 h-4 rounded-full bg-white border-2 border-white/30"></div>
-                  <span className="text-xs font-medium text-white">PURE WHITE</span>
+                  <div
+                    className={`w-4 h-4 rounded-full ${selectedColor === "white" ? "bg-white border-2 border-black" : "bg-black border-2 border-white"}`}
+                  ></div>
+                  <span className="text-xs font-medium text-white">
+                    {selectedColor === "white" ? "WHITE" : "BLACK"}
+                  </span>
                   <span className="text-sm font-medium text-white">£60.88</span>
                 </div>
               </div>
@@ -584,7 +603,7 @@ export default function SatisfyerLoveTriangleProductPage() {
             <div className="relative order-1 lg:order-1">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-4 sm:p-6 lg:p-8">
                 <Image
-                  src="/images/love-triangle-1.jpg"
+                  src={productImages[0] || "/placeholder.svg"}
                   alt="Love Triangle details"
                   width={600}
                   height={600}
@@ -847,6 +866,41 @@ export default function SatisfyerLoveTriangleProductPage() {
                 App-Controlled Couples Vibrator
               </p>
 
+              {/* Color Selection */}
+              <div className="mb-6 sm:mb-8">
+                <p className="text-[#E1B88B] font-medium mb-4 text-sm sm:text-base">SELECT COLOUR</p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => {
+                      setSelectedColor("white")
+                      setSelectedImage(0)
+                    }}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all ${
+                      selectedColor === "white"
+                        ? "border-[#E1B88B] bg-[#E1B88B]/10"
+                        : "border-[#E1B88B]/30 hover:border-[#E1B88B]/50"
+                    }`}
+                  >
+                    <span className="w-4 h-4 rounded-full bg-white border-2 border-black"></span>
+                    <span className="text-sm text-[#E1B88B]">White</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setSelectedColor("black")
+                      setSelectedImage(0)
+                    }}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all ${
+                      selectedColor === "black"
+                        ? "border-[#E1B88B] bg-[#E1B88B]/10"
+                        : "border-[#E1B88B]/30 hover:border-[#E1B88B]/50"
+                    }`}
+                  >
+                    <span className="w-4 h-4 rounded-full bg-black border-2 border-[#E1B88B]"></span>
+                    <span className="text-sm text-[#E1B88B]">Black</span>
+                  </button>
+                </div>
+              </div>
+
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
                 <div className="text-2xl sm:text-3xl font-serif font-light text-[#E1B88B]">£60.88</div>
                 <Badge variant="outline" className="border-amber-600 text-amber-700 bg-amber-100 text-xs font-medium">
@@ -997,7 +1051,7 @@ export default function SatisfyerLoveTriangleProductPage() {
         <div className="flex items-center space-x-4 w-full max-w-full">
           <div className="flex-1">
             <div className="text-lg font-serif font-light text-[#E1B88B]">£60.88</div>
-            <div className="text-xs text-[#E1B88B]/70">SATISFYER LOVE TRIANGLE CONNECT</div>
+            <div className="text-xs text-[#E1B88B]/70">{selectedColor === "white" ? "WHITE" : "BLACK"}</div>
           </div>
           <Link href="https://buy.stripe.com/bJe28qa1K1TqcS286C6AM0a" target="_blank" rel="noopener noreferrer">
             <Button className="bg-[#E1B88B] text-white hover:bg-[#D4A574] px-8 py-3 rounded-full font-medium">
@@ -1052,12 +1106,13 @@ export default function SatisfyerLoveTriangleProductPage() {
                 >
                   <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
                 </Link>
+                <CookieSettingsButton />
               </div>
             </div>
+          </div>
 
-            <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm font-light">
-              <p>© 2025 Royal Caress Ltd — All rights reserved</p>
-            </div>
+          <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm font-light">
+            <p>© 2025 Royal Caress Ltd — All rights reserved</p>
           </div>
         </div>
       </footer>
