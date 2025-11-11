@@ -1,4 +1,4 @@
-
+"use client"
 
 import { Instagram, MessageCircle } from "lucide-react"
 import Image from "next/image"
