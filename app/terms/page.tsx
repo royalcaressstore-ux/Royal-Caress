@@ -365,14 +365,33 @@ export default function TermsPage() {
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We currently deliver to the following locations: - All of the UK (including Northern Ireland) - European Union - Selected countries outside the EU</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">For a full list of countries we deliver to, please see our Delivery Information page on the website.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.2 Delivery Options and Deadlines</h3>
+                    
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">United Kingdom:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Delivery Method</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Estimated Deadline</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Cost</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Standard</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">7’-21 business days</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">£5.95</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Delivery times are estimates only and are not guaranteed. Factors such as weather conditions, seasonal events (such as Black Friday, Valentine's Day, Women's Day, or Christmas), customs procedures, and local holidays may affect delivery times.</p>
+            
+          
+          
+          <div className="overflow-x-auto mb-8">
+  <table className="min-w-full border border-[#4B1D3F]/30 text-left">
+    <thead className="bg-[#F7F7F7]">
+      <tr>
+        <th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Delivery Method</th>
+        <th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Estimated Deadline</th>
+        <th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Standard</td>
+        <td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">7–21 business days</td>
+        <td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">£5.95</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            
+          
+          <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Delivery times are estimates only and are not guaranteed. Factors such as weather conditions, seasonal events (such as Black Friday, Valentine's Day, Women's Day, or Christmas), customs procedures, and local holidays may affect delivery times.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.3 Order Tracking</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">All delivery methods include tracking. Once your order is shipped, you'll receive a confirmation email with a tracking number and instructions on how to track your package.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.4 Discreet Packaging</h3>
