@@ -7,10 +7,17 @@ import Link from "next/link"
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
       <header className="bg-[#4B1D3F] px-6 lg:px-12 py-6">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image src="/images/royal-caress-logo.png" alt="Royal Caress" width={96} height={96} className="h-24 w-auto" />
+            <Image
+              src="/images/royal-caress-logo.png"
+              alt="Royal Caress"
+              width={96}
+              height={96}
+              className="h-24 w-auto"
+            />
           </Link>
           <Link href="/" className="text-white/70 hover:text-white transition-colors text-sm">
             Back to Home
@@ -18,18 +25,24 @@ export default function TermsPage() {
         </div>
       </header>
 
+      {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#4B1D3F] to-[#B3123D] py-16 lg:py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-serif font-light text-white mb-6 tracking-tight">
             Policies &amp; Terms
           </h1>
-          <p className="text-lg text-white/90 leading-relaxed font-light">Please read the policies and terms below.</p>
+          <p className="text-lg text-white/90 leading-relaxed font-light">
+            Please read the policies and terms below.
+          </p>
         </div>
       </section>
 
+      {/* Content parsed from DOCX (tables + lists preserved) */}
       <section className="py-16 lg:py-24 px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl lg:text-3xl font-serif font-light mb-4">GENERAL TERMS AND CONDITIONS</h2>
+<ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>GENERAL TERMS AND CONDITIONS</li>
+            </ol>
             <h3 className="text-xl font-medium mt-6 mb-3">1.1 Introduction</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Welcome to Royal Caress.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">These Terms and Conditions govern your use of our website and the purchase of products through it.</p>
@@ -46,18 +59,22 @@ export default function TermsPage() {
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">By placing an order, you are making an offer to purchase products. All orders are subject to acceptance and availability.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">The contract between you and Royal Caress will only be formalized when we send you an order confirmation email. This email will constitute acceptance of your offer to purchase products.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We reserve the right to refuse your order for any reason, including:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Product out of stock</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Inability to authorize your payment</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Identifying a price or product description error</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Suspected fraud</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Age verification failed</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Product out of stock</li>
+              <li>Inability to authorize your payment</li>
+              <li>Identifying a price or product description error</li>
+              <li>Suspected fraud</li>
+              <li>Age verification failed</li>
+            </ul>
             <h3 className="text-xl font-medium mt-6 mb-3">1.5 Payment</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We accept the following payment methods:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Credit and debit cards (Visa, Mastercard, American Express, UnionPay, JCB, Discover)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Apple Pay</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Klarna</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">ClearPay</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Revolut Pay</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Credit and debit cards (Visa, Mastercard, American Express, UnionPay, JCB, Discover)</li>
+              <li>Apple Pay</li>
+              <li>Klarna</li>
+              <li>ClearPay</li>
+              <li>Revolut Pay</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">All credit and debit card transactions are processed through secure and encrypted payment gateways. We do not store full card details on our servers.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">1.6 Delivery</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We deliver throughout the UK. Delivery times and costs vary depending on location and the delivery method chosen.</p>
@@ -101,89 +118,119 @@ export default function TermsPage() {
             <h3 className="text-xl font-medium mt-6 mb-3">2.2 Information We Collect</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We may collect and process the following data about you:</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Information you provide to us:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Identifying information (name, date of birth for age verification)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Contact information (email address, phone number, postal address)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Payment information (credit/debit card details, billing address)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Order history and product preferences</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Communications with us (emails, chat, phone calls)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Responses to surveys or questionnaires</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Identifying information (name, date of birth for age verification)</li>
+              <li>Contact information (email address, phone number, postal address)</li>
+              <li>Payment information (credit/debit card details, billing address)</li>
+              <li>Order history and product preferences</li>
+              <li>Communications with us (emails, chat, phone calls)</li>
+              <li>Responses to surveys or questionnaires</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Information we collect automatically:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Technical information (IP address, browser type, operating system)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Usage information (pages visited, products viewed, time spent on the site)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Location information (country, city)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Cookies and similar technologies (as detailed in our Cookie Policy)</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Technical information (IP address, browser type, operating system)</li>
+              <li>Usage information (pages visited, products viewed, time spent on the site)</li>
+              <li>Location information (country, city)</li>
+              <li>Cookies and similar technologies (as detailed in our Cookie Policy)</li>
+            </ul>
             <h3 className="text-xl font-medium mt-6 mb-3">2.3 How We Use Your Information</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We only use your personal information when the law allows us to. Most commonly, we will use your personal information in the following circumstances:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">To perform the contract we are about to enter into or have entered into with you</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Where it is necessary for our legitimate interests (or those of a third party) where your interests and fundamental rights do not override</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">When we need to comply with a legal or regulatory obligation</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">When you consented to the use</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+                <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+                  <li>To perform the contract we are about to enter into or have entered into with you</li>
+                  <li>Where it is necessary for our legitimate interests (or those of a third party) where your interests and fundamental rights do not override</li>
+                  <li>When we need to comply with a legal or regulatory obligation</li>
+                  <li>When you consented to the use</li>
+                </ol>
+              </ol>
+            </ol>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Specifically, we use your information to:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Process and deliver your orders</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Verify your age (to comply with adult product regulations)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Manage payments, fees, and charges</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Communicate with you about your order, account, or other inquiries</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Personalize your experience and provide relevant content and product offers</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Improve our website, products and services</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Administer and protect our business and website</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Measure the effectiveness of our advertising</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Comply with legal and regulatory obligations</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Send newsletters and promotional offers only with your explicit consent collected through a checkbox at checkout or in the registration form.</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Process and deliver your orders</li>
+              <li>Verify your age (to comply with adult product regulations)</li>
+              <li>Manage payments, fees, and charges</li>
+              <li>Communicate with you about your order, account, or other inquiries</li>
+              <li>Personalize your experience and provide relevant content and product offers</li>
+              <li>Improve our website, products and services</li>
+              <li>Administer and protect our business and website</li>
+              <li>Measure the effectiveness of our advertising</li>
+              <li>Comply with legal and regulatory obligations</li>
+              <li>Send newsletters and promotional offers only with your explicit consent collected through a checkbox at checkout or in the registration form.</li>
+            </ul>
             <h3 className="text-xl font-medium mt-6 mb-3">2.4 Legal Basis for Processing</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We process your personal data based on the following legal bases:</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Contract Execution: When processing is necessary for the performance of a contract with you or in order to take steps at your request prior to entering into a contract.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Legitimate Interests: When processing is necessary for our legitimate interests or those of a third party, such as:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Operate and improve our business and website</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Direct marketing of relevant products</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Fraud prevention</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Network and information security</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Operate and improve our business and website</li>
+              <li>Direct marketing of relevant products</li>
+              <li>Fraud prevention</li>
+              <li>Network and information security</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Legal Obligation: When processing is necessary to comply with a legal obligation to which we are subject, such as:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Age verification for adult products</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Maintenance of tax and accounting records</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Responding to requests from legal authorities</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Age verification for adult products</li>
+              <li>Maintenance of tax and accounting records</li>
+              <li>Responding to requests from legal authorities</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Consent: When you have given explicit consent to the processing of your personal data for one or more specific purposes, such as:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Email or SMS marketing</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Use of non-essential cookies</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Processing of special categories of data</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Email or SMS marketing</li>
+              <li>Use of non-essential cookies</li>
+              <li>Processing of special categories of data</li>
+            </ul>
             <h3 className="text-xl font-medium mt-6 mb-3">2.5 Data Sharing</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We may share your personal information with the following categories of third parties:</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Service providersServices include:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Payment processors</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Delivery and logistics companies</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Age verification services</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Hosting and technology providers</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Customer service</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Payment processors</li>
+              <li>Delivery and logistics companies</li>
+              <li>Age verification services</li>
+              <li>Hosting and technology providers</li>
+              <li>Customer service</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Business Partners:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Product suppliers.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Marketing partners</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Product suppliers.</li>
+              <li>Marketing partners</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Legal Authorities:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">When required by law, regulation or legal process</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">To protect our legal rights or property</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">In the event of a merger, sale or transfer of business assets</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>When required by law, regulation or legal process</li>
+              <li>To protect our legal rights or property</li>
+              <li>In the event of a merger, sale or transfer of business assets</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">All third parties with whom we share your data are required to respect the security of your personal information and to treat it in accordance with the law. We do not allow our third-party service providers to use any of your personal data for their own purposes and only permit them to process your personal data for specific purposes in accordance with our instructions.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">2.6 Data Security</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We implement appropriate technical and organizational security measures to protect your personal information against accidental loss, unauthorized use or access, alteration, or disclosure. These measures include:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Encryption of sensitive data</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Firewalls and intrusion detection systems</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Restricted access based on a need to know basis</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Regular monitoring of systems to detect vulnerabilities</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Employee training in data security practices</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Encryption of sensitive data</li>
+              <li>Firewalls and intrusion detection systems</li>
+              <li>Restricted access based on a need to know basis</li>
+              <li>Regular monitoring of systems to detect vulnerabilities</li>
+              <li>Employee training in data security practices</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We limit access to your personal information to essential personnel. Access is granted solely for legitimate business purposes. They will only process your personal information on our instructions and are subject to a duty of confidentiality.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We have procedures in place to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">2.7 Data Retention</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We will only retain your personal information for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">To determine the appropriate retention period for personal data, we consider:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">The amount, nature and sensitivity of personal data</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">The potential risk of harm from unauthorized use or disclosure</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">The purposes for which we process data</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">If we can achieve these purposes by other means</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Applicable legal requirements</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>The amount, nature and sensitivity of personal data</li>
+              <li>The potential risk of harm from unauthorized use or disclosure</li>
+              <li>The purposes for which we process data</li>
+              <li>If we can achieve these purposes by other means</li>
+              <li>Applicable legal requirements</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">In some circumstances, we may anonymize your personal information (so that it can no longer be associated with you) for research or statistical purposes, in which case we may use this information indefinitely without further notice to you.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Specific retention periods:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Account Information: While your account is active, plus 2 years after inactivity</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Order history: 7 years (for accounting and tax purposes)</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Customer Service Communications: 2 years after query resolution</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Marketing data: 2 years after the last interaction or until you withdraw consent</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Account Information: While your account is active, plus 2 years after inactivity</li>
+              <li>Order history: 7 years (for accounting and tax purposes)</li>
+              <li>Customer Service Communications: 2 years after query resolution</li>
+              <li>Marketing data: 2 years after the last interaction or until you withdraw consent</li>
+            </ul>
             <h3 className="text-xl font-medium mt-6 mb-3">2.8 Your Data Protection Rights</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Under data protection laws, you have the following rights regarding your personal information:</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Right of access: You have the right to request a copy of the personal information we hold about you.</p>
@@ -222,46 +269,78 @@ export default function TermsPage() {
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Targeting or Advertising Cookies: These cookies are used to deliver advertisements that are more relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of an advertising campaign. They are usually placed by advertising networks with the website operator's permission. They remember that you have visited a website and this information is shared with other organizations, such as advertisers.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Social Media Cookies: Our website may include features provided by third parties, such as "like" and "share" buttons. These features may collect your IP address and which pages you visit on our website, and may set a cookie to enable the feature to function properly.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">3.4 Specific Cookies We Use</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Cookie Name</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Type</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Purpose</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Duration</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">session_id</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Strictly Necessary</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Keeps your session state</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Session</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">cart_contents</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Strictly Necessary</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Stores items in your cart</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">30 days</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">age_verified</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Strictly Necessary</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Records that your age has been verified</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">30 days</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">_ga</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Performance</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Google Analytics - Used to distinguish users</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">2 years</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">_gid</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Performance</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Google Analytics - Used to distinguish users</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">24 hours</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Cookie Name</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Type</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Purpose</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Duration</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">_fbp</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Advertising</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Facebook Pixel - Used for advertising</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">3 months</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">user_preferences</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Functionality</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Stores user preferences</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">1 again</h3>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">recently_viewed</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Functionality</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Stores recently viewed products</p>
-            <h3 className="text-xl font-medium mt-6 mb-3">30 days</h3>
+            <div className="overflow-x-auto mb-8">
+<table className="min-w-full border border-[#4B1D3F]/30 text-left">
+<thead className="bg-[#F7F7F7]">
+<tr>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Cookie Name</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Type</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Purpose</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">session_id</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Strictly Necessary</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Keeps your session state</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Session</td>
+</tr>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">cart_contents</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Strictly Necessary</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Stores items in your cart</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">30 days</td>
+</tr>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">age_verified</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Strictly Necessary</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Records that your age has been verified</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">30 days</td>
+</tr>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">_ga</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Performance</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Google Analytics - Used to distinguish users</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">2 years</td>
+</tr>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">_gid</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Performance</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Google Analytics - Used to distinguish users</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">24 hours</td>
+</tr>
+</tbody></table></div>
+            <div className="overflow-x-auto mb-8">
+<table className="min-w-full border border-[#4B1D3F]/30 text-left">
+<thead className="bg-[#F7F7F7]">
+<tr>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Cookie Name</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Type</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Purpose</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">_fbp</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Advertising</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Facebook Pixel - Used for advertising</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">3 months</td>
+</tr>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">user_preferences</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Functionality</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Stores user preferences</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">1 again</td>
+</tr>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">recently_viewed</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Functionality</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Stores recently viewed products</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">30 days</td>
+</tr>
+</tbody></table></div>
             <h3 className="text-xl font-medium mt-6 mb-3">3.5 Cookie Consent</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">When you first visit our website, we display a cookie banner asking for your consent to non-essential cookies. You can choose to accept all cookies, only essential cookies, or customize your preferences.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">You can change your cookie preferences at any time by visiting our "Cookie Preferences" page in the footer of the website.</p>
@@ -289,12 +368,14 @@ export default function TermsPage() {
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">You have legal rights regarding products that are defective or not as described. These legal rights are not affected by this Return and Refund Policy or by  the General Terms and Conditions.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">4.6 How to Make a Return</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">To initiate a return, follow these steps:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Contact our Customer Service by email support@royalcaress.co.uk</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Please provide your order number, details of the product(s) you wish to return, and the reason for the return.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Our team will provide you with a Return Merchandise Authorization (RMA) number and detailed return instructions.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Pack the product(s) securely, ideally in the original packaging.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Include the RMA number and your proof of purchase in the package.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Send the package to the return address provided in the email.</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Contact our Customer Service by email support@royalcaress.co.uk</li>
+              <li>Please provide your order number, details of the product(s) you wish to return, and the reason for the return.</li>
+              <li>Our team will provide you with a Return Merchandise Authorization (RMA) number and detailed return instructions.</li>
+              <li>Pack the product(s) securely, ideally in the original packaging.</li>
+              <li>Include the RMA number and your proof of purchase in the package.</li>
+              <li>Send the package to the return address provided in the email.</li>
+            </ol>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">For returns of defective products, we may request photos or other evidence of the defect before approving the return.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">4.7 Refunds</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Once we receive and inspect your returned item, we will send you an email to notify you that we have received your return and to let you know whether or not your refund has been approved.</p>
@@ -309,23 +390,31 @@ export default function TermsPage() {
             <h3 className="text-xl font-medium mt-6 mb-3">5.3 Verification Process</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We have implemented a multi-step age verification process:</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Passive Verification:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Age declaration at website entrance</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Age confirmation during account registration</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Age verification at checkout</p>
+            <ul className="list-disc ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Age declaration at website entrance</li>
+              <li>Age confirmation during account registration</li>
+              <li>Age verification at checkout</li>
+            </ul>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Active Verification: In addition to passive verification, we can perform active age verification using one or more of the following methods:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Credit Card Verification: We verify that the payment method used is in your name and is a credit card (which is generally only available to those over 18).</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Database Verification: We may check your details against voter, credit and other public records databases to confirm your age.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Documentation: In some cases, we may ask you to provide a copy of a government-issued photo ID (such as a passport, driver's license) to verify your age.</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Credit Card Verification: We verify that the payment method used is in your name and is a credit card (which is generally only available to those over 18).</li>
+              <li>Database Verification: We may check your details against voter, credit and other public records databases to confirm your age.</li>
+              <li>Documentation: In some cases, we may ask you to provide a copy of a government-issued photo ID (such as a passport, driver's license) to verify your age.</li>
+            </ol>
             <h3 className="text-xl font-medium mt-6 mb-3">5.4 Verification Failed</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">If we cannot verify that you are 18 or older, we will not be able to process your order. In this case:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Your order will be placed on hold</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We will contact you requesting additional verification.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">If verification is not provided within 7 days, your order will be cancelled and refunded.</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Your order will be placed on hold</li>
+              <li>We will contact you requesting additional verification.</li>
+              <li>If verification is not provided within 7 days, your order will be cancelled and refunded.</li>
+            </ol>
             <h3 className="text-xl font-medium mt-6 mb-3">5.5 Age Falsification</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Providing false information about your age or attempting to circumvent our age verification processes is a serious violation of these Terms. If we discover that you have falsified your age:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Your order will be canceled immediately.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Your account will be permanently closed.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We may report the incident to the relevant authorities.</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Your order will be canceled immediately.</li>
+              <li>Your account will be permanently closed.</li>
+              <li>We may report the incident to the relevant authorities.</li>
+            </ol>
             <h3 className="text-xl font-medium mt-6 mb-3">5.6 Privacy and Verification Data</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Any documents or information provided for age verification will be treated with the strictest confidentiality and in accordance with our Privacy Policy.</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Identity documents provided for age verification will be viewed for that purpose only and will not be stored longer than necessary to complete the verification.</p>
@@ -365,39 +454,36 @@ export default function TermsPage() {
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We currently deliver to the following locations: - All of the UK (including Northern Ireland) - European Union - Selected countries outside the EU</p>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">For a full list of countries we deliver to, please see our Delivery Information page on the website.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.2 Delivery Options and Deadlines</h3>
-                    
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">United Kingdom:</p>
-            
-          
-          
-          <div className="overflow-x-auto mb-8">
-  <table className="min-w-full border border-[#4B1D3F]/30 text-left">
-    <thead className="bg-[#F7F7F7]">
-      <tr>
-        <th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Delivery Method</th>
-        <th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Estimated Deadline</th>
-        <th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Cost</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Standard</td>
-        <td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">7–21 business days</td>
-        <td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">£5.95</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-            
-          
-          <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Delivery times are estimates only and are not guaranteed. Factors such as weather conditions, seasonal events (such as Black Friday, Valentine's Day, Women's Day, or Christmas), customs procedures, and local holidays may affect delivery times.</p>
+            <div className="overflow-x-auto mb-8">
+<table className="min-w-full border border-[#4B1D3F]/30 text-left">
+<thead className="bg-[#F7F7F7]">
+<tr>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Delivery Method</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Estimated Deadline</th>
+<th className="py-3 px-4 text-[#4B1D3F] font-medium border-b border-[#4B1D3F]/30">Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">Standard</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">7’-21 business days</td>
+<td className="py-3 px-4 text-[#4B1D3F]/80 border-b border-[#4B1D3F]/20">£5.95</td>
+</tr>
+</tbody></table></div>
+            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Delivery times are estimates only and are not guaranteed. Factors such as weather conditions, seasonal events (such as Black Friday, Valentine's Day, Women's Day, or Christmas), customs procedures, and local holidays may affect delivery times.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.3 Order Tracking</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">All delivery methods include tracking. Once your order is shipped, you'll receive a confirmation email with a tracking number and instructions on how to track your package.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.4 Discreet Packaging</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">All orders are shipped in discreet packaging, with no indication of the contents. Packages are shipped in:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">No external logos or brands related to adult products</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">No description of contents on the outside of the package</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+                <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+                  <li>No external logos or brands related to adult products</li>
+                  <li>No description of contents on the outside of the package</li>
+                </ol>
+              </ol>
+            </ol>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Your privacy is our priority, and every effort is made to ensure your order arrives discreetly and confidentially.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">7.5 Customs Duties</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We are not responsible for any customs fees or import taxes that may be charged at the destination. These costs are the customer's responsibility.</p>
@@ -477,10 +563,12 @@ export default function TermsPage() {
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">If a product does not meet these criteria, you have legal rights regardless of our warranty.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">9.6 How to Make a Warranty Claim</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">If you believe your product has a defect covered by our warranty:</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Please contact our customer service within the warranty period.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Please provide your order number, product details, and description of the issue.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Include photos or videos of the defect, if possible.</p>
-            <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">Our team will evaluate your complaint and provide you with further instructions.</p>
+            <ol className="list-decimal ml-6 text-[#4B1D3F]/80 leading-relaxed mb-4">
+              <li>Please contact our customer service within the warranty period.</li>
+              <li>Please provide your order number, product details, and description of the issue.</li>
+              <li>Include photos or videos of the defect, if possible.</li>
+              <li>Our team will evaluate your complaint and provide you with further instructions.</li>
+            </ol>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">We may ask you to return the product for inspection. In this case, we'll provide a prepaid return label.</p>
             <h3 className="text-xl font-medium mt-6 mb-3">9.7 Solutions for Warranty Claims</h3>
             <p className="leading-relaxed text-[#4B1D3F]/80 mb-4">If your warranty claim is approved, we will offer, at our discretion:</p>
@@ -511,6 +599,7 @@ export default function TermsPage() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="py-16 px-6 lg:px-12 bg-[#0B0B0B] text-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -520,29 +609,52 @@ export default function TermsPage() {
                 A sanctuary for intimate wellness, celebrating every body and every expression of pleasure.
               </p>
             </div>
+
             <div>
               <h4 className="font-medium mb-4 tracking-wide">Connect</h4>
               <p className="text-white/70 mb-4 text-sm">support@royalcaress.co.uk</p>
+
               <div className="mb-4">
                 <Link href="/terms" className="text-white/70 hover:text-white text-sm transition-colors">
                   GENERAL TERMS AND CONDITIONS
                 </Link>
               </div>
+
               <div className="flex gap-4 mb-4">
-                <Link href="https://www.tiktok.com/@royal.caress" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110">
-                  <svg className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <Link
+                  href="https://www.tiktok.com/@royal.caress"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.43z" />
                   </svg>
                 </Link>
-                <Link href="https://www.instagram.com/royal.caress/" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110">
+                <Link
+                  href="https://www.instagram.com/royal.caress/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
                   <Instagram className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
                 </Link>
-                <Link href="https://wa.me/447592253773?text=Hello%21%20Hope%20you%27re%20well.%20I%27d%20love%20to%20speak%20when%20you%20have%20a%20moment.%20Many%20thanks%21" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110">
+                <Link
+                  href="https://wa.me/447592253773?text=Hello%21%20Hope%20you%27re%20well.%20I%27d%20love%20to%20speak%20when%20you%20have%20a%20moment.%20Many%20thanks%21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:scale-110"
+                >
                   <MessageCircle className="w-5 h-5 text-white/70 hover:text-white cursor-pointer transition-all duration-300" />
                 </Link>
               </div>
             </div>
           </div>
+
           <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm font-light">
             <p>© 2025 Royal Caress Ltd — All rights reserved</p>
           </div>
