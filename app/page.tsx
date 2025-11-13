@@ -751,6 +751,7 @@ export default function RoyalCaressLanding() {
 
       {/* 9. Newsletter — The Next Chapter */}
 {/* Newsletter Section */}
+{/* Newsletter Section */}
 <section className="py-24 lg:py-32 px-6 lg:px-12 bg-[#b3123c] relative overflow-hidden">
   <div className="absolute inset-0 opacity-10">
     <div className="absolute top-20 left-20 w-96 h-96 bg-[#F5E1DA] rounded-full blur-3xl"></div>
@@ -765,14 +766,14 @@ export default function RoyalCaressLanding() {
       Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
     </p>
 
-    {/* FORM NETLIFY */}
+    {/* FORM NETLIFY – APENAS EMAIL */}
     <form
       name="newsletter"
       method="POST"
       data-netlify="true"
       className="max-w-md mx-auto"
     >
-      {/* Required hidden field */}
+      {/* obrigatório pro Netlify identificar o form */}
       <input type="hidden" name="form-name" value="newsletter" />
 
       <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
@@ -794,6 +795,7 @@ export default function RoyalCaressLanding() {
     </form>
   </div>
 </section>
+
 
 
 
