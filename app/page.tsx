@@ -750,6 +750,7 @@ export default function RoyalCaressLanding() {
       />
 
       {/* 9. Newsletter — The Next Chapter */}
+{/* Newsletter Section */}
 <section className="py-24 lg:py-32 px-6 lg:px-12 bg-[#b3123c] relative overflow-hidden">
   <div className="absolute inset-0 opacity-10">
     <div className="absolute top-20 left-20 w-96 h-96 bg-[#F5E1DA] rounded-full blur-3xl"></div>
@@ -764,35 +765,36 @@ export default function RoyalCaressLanding() {
       Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
     </p>
 
-    {/* FORMULÁRIO NETLIFY */}
+    {/* FORM NETLIFY */}
     <form
       name="newsletter"
       method="POST"
       data-netlify="true"
       className="max-w-md mx-auto"
     >
-      {/* campo oculto obrigatório para o Netlify */}
+      {/* Required hidden field */}
       <input type="hidden" name="form-name" value="newsletter" />
 
       <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
-        <Input
+        <input
           type="email"
           name="email"
           placeholder="Your email address"
           required
-          className="bg-transparent border-0 text-white placeholder:text-white/60 text-lg px-6 py-4 focus:ring-0 flex-1"
+          className="bg-transparent border-0 text-white placeholder:text-white/60 text-lg px-6 py-4 focus:ring-0 flex-1 outline-none"
         />
 
-        <Button
+        <button
           type="submit"
           className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
         >
           Join the Circle
-        </Button>
+        </button>
       </div>
     </form>
   </div>
 </section>
+
 
 
       {/* 10. Footer — The Whisper */}
