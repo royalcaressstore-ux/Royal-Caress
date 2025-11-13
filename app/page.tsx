@@ -766,31 +766,44 @@ export default function RoyalCaressLanding() {
       Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
     </p>
 
-    {/* FORM NETLIFY – APENAS EMAIL */}
+    {/* FORM MAILCHIMP – APENAS EMAIL, MESMO LAYOUT */}
     <form
-      name="newsletter"
-      method="POST"
-      data-netlify="true"
+      action="https://royalcaress.us20.list-manage.com/subscribe/post?u=464156ba230141a8d7d186f1e&id=5703186a6c&f_id=003920eef0"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
       className="max-w-md mx-auto"
+      target="_blank"
+      noValidate
     >
-      {/* obrigatório pro Netlify identificar o form */}
-      <input type="hidden" name="form-name" value="newsletter" />
-
       <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
         <input
           type="email"
-          name="email"
-          placeholder="Your email address"
+          name="EMAIL"
+          id="mce-EMAIL"
           required
+          placeholder="Your email address"
           className="bg-transparent border-0 text-white placeholder:text-white/60 text-lg px-6 py-4 focus:ring-0 flex-1 outline-none"
         />
 
         <button
           type="submit"
+          name="subscribe"
+          id="mc-embedded-subscribe"
           className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
         >
           Join the Circle
         </button>
+      </div>
+
+      {/* Honeypot anti-spam do Mailchimp */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
+        <input
+          type="text"
+          name="b_464156ba230141a8d7d186f1e_5703186a6c"
+          tabIndex={-1}
+          defaultValue=""
+        />
       </div>
     </form>
   </div>
