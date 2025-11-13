@@ -750,36 +750,50 @@ export default function RoyalCaressLanding() {
       />
 
       {/* 9. Newsletter — The Next Chapter */}
-      <section className="py-24 lg:py-32 px-6 lg:px-12 bg-[#b3123c] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-[#F5E1DA] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#B3123D] rounded-full blur-3xl"></div>
-        </div>
+<section className="py-24 lg:py-32 px-6 lg:px-12 bg-[#b3123c] relative overflow-hidden">
+  <div className="absolute inset-0 opacity-10">
+    <div className="absolute top-20 left-20 w-96 h-96 bg-[#F5E1DA] rounded-full blur-3xl"></div>
+    <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#B3123D] rounded-full blur-3xl"></div>
+  </div>
 
-        <div className="relative max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-serif font-light mb-6 tracking-tight text-white">
-            Want More Than Just a Product?
-          </h2>
-          <p className="text-xl lg:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
-          </p>
+  <div className="relative max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl lg:text-5xl font-serif font-light mb-6 tracking-tight text-white">
+      Want More Than Just a Product?
+    </h2>
+    <p className="text-xl lg:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+      Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
+    </p>
 
-          <div className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-transparent border-0 text-white placeholder:text-white/60 text-lg px-6 py-4 focus:ring-0 flex-1"
-              />
-              <Button className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105">
-                Join the Circle
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* FORMULÁRIO NETLIFY */}
+    <form
+      name="newsletter"
+      method="POST"
+      data-netlify="true"
+      className="max-w-md mx-auto"
+    >
+      {/* campo oculto obrigatório para o Netlify */}
+      <input type="hidden" name="form-name" value="newsletter" />
+
+      <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
+        <Input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+          className="bg-transparent border-0 text-white placeholder:text-white/60 text-lg px-6 py-4 focus:ring-0 flex-1"
+        />
+
+        <Button
+          type="submit"
+          className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        >
+          Join the Circle
+        </Button>
+      </div>
+    </form>
+  </div>
+</section>
+
 
       {/* 10. Footer — The Whisper */}
       <footer className="py-16 px-6 lg:px-12 bg-[#0B0B0B] text-white">
