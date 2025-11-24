@@ -766,16 +766,10 @@ export default function RoyalCaressLanding() {
       Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
     </p>
 
-    {/* IFRAME oculto para capturar o retorno do Mailchimp sem redirecionar */}
+    {/* iframe oculto para evitar redirecionamento do Mailchimp */}
     <iframe
       name="mc-hidden-iframe"
       style={{ display: "none" }}
-      onLoad={() => {
-        // Só mostra o popup depois de um submit real
-        if (hasSubmitted) {
-          alert("Cadastro realizado com sucesso! 🎉")
-        }
-      }}
     />
 
     {/* FORM MAILCHIMP – APENAS EMAIL, MESMO LAYOUT */}
@@ -785,11 +779,11 @@ export default function RoyalCaressLanding() {
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
       className="max-w-md mx-auto"
-      target="mc-hidden-iframe"        // envia para o iframe escondido
-      onSubmit={() => setHasSubmitted(true)}  // marca que houve envio
+      target="mc-hidden-iframe"          // envia pro iframe escondido
+      onSubmit={() => setShowThanks(true)} // mostra popup depois de enviar
       noValidate
     >
-      <div className="flex flex-col sm:flex-row gap-4 bg:white/10 backdrop-blur-md rounded-full p-2 bg-white/10">
+      <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
         <input
           type="email"
           name="EMAIL"
@@ -803,7 +797,7 @@ export default function RoyalCaressLanding() {
           type="submit"
           name="subscribe"
           id="mc-embedded-subscribe"
-          className="bg-white text-[#4B1D3F] hover:bg:white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:bg-white/90"
+          className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
         >
           Join the Circle
         </button>
@@ -819,6 +813,26 @@ export default function RoyalCaressLanding() {
         />
       </div>
     </form>
+
+    {/* POPUP SIMPLES DE SUCESSO */}
+    {showThanks && (
+      <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+        <div className="bg-white rounded-2xl px-8 py-6 max-w-sm w-full text-center">
+          <h3 className="text-xl font-semibold text-[#4B1D3F] mb-3">
+            Subscription confirmed! 🎉
+          </h3>
+          <p className="text-sm text-[#4B1D3F]/80 mb-6">
+            Thank you for joining our intimate circle. Check your inbox soon.
+          </p>
+          <button
+            onClick={() => setShowThanks(false)}
+            className="bg-[#b3123c] text-white px-6 py-2 rounded-full text-sm hover:bg-[#8f0f31] transition-colors"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    )}
   </div>
 </section>
 
