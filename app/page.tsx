@@ -766,6 +766,18 @@ export default function RoyalCaressLanding() {
       Get intimacy insights, slow pleasure rituals and private offers — straight to your inbox.
     </p>
 
+    {/* IFRAME oculto para capturar o retorno do Mailchimp sem redirecionar */}
+    <iframe
+      name="mc-hidden-iframe"
+      style={{ display: "none" }}
+      onLoad={() => {
+        // Só mostra o popup depois de um submit real
+        if (hasSubmitted) {
+          alert("Cadastro realizado com sucesso! 🎉")
+        }
+      }}
+    />
+
     {/* FORM MAILCHIMP – APENAS EMAIL, MESMO LAYOUT */}
     <form
       action="https://royalcaress.us20.list-manage.com/subscribe/post?u=464156ba230141a8d7d186f1e&id=5703186a6c&f_id=003920eef0"
@@ -773,10 +785,11 @@ export default function RoyalCaressLanding() {
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
       className="max-w-md mx-auto"
-      target="_blank"
+      target="mc-hidden-iframe"        // envia para o iframe escondido
+      onSubmit={() => setHasSubmitted(true)}  // marca que houve envio
       noValidate
     >
-      <div className="flex flex-col sm:flex-row gap-4 bg-white/10 backdrop-blur-md rounded-full p-2">
+      <div className="flex flex-col sm:flex-row gap-4 bg:white/10 backdrop-blur-md rounded-full p-2 bg-white/10">
         <input
           type="email"
           name="EMAIL"
@@ -790,7 +803,7 @@ export default function RoyalCaressLanding() {
           type="submit"
           name="subscribe"
           id="mc-embedded-subscribe"
-          className="bg-white text-[#4B1D3F] hover:bg-white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
+          className="bg-white text-[#4B1D3F] hover:bg:white/90 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:bg-white/90"
         >
           Join the Circle
         </button>
